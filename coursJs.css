@@ -1,0 +1,77 @@
+@media screen {
+    
+}
+
+#corps {
+    background-color: #ff6a6588;
+    text-align: center;
+}
+
+#spd2 {
+    margin: auto;
+}
+
+.mpSection {
+    background-color: black;
+    color: white;
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    border-radius: 2%;
+    padding: 1%;
+}
+
+.mpDivDark {
+    background-color: grey;
+    color: black;
+    width: 100%;
+    margin: 1%;
+}
+
+.mpDivGrey {
+    background-color: grey;
+    font-size: 17px;
+    border-radius: 2%;
+    width: 46%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1.3%;
+    padding: 1%;
+}
+.mpDivGreyXl {
+    background-color: grey;
+    font-size: 17px;
+    border-radius: 2%;
+    width: 95%;
+    margin-left: 1.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    padding: 1%;
+}
+
+.justifie{
+    text-align: justify;
+}
+.centrer {
+    text-align: center;
+}
+
+table,
+td {
+    border: 1px solid  #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+.m10{
+    margin-left: 10%;
+}
+p, span{
+    white-space:pre
+}
