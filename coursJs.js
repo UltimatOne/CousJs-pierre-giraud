@@ -672,7 +672,9 @@ const s5d2 = document.querySelector('#s5d2');
 
 const s5d2SousTitre1 = document.createElement('h2');
 s5d2SousTitre1.id = 's5d2SousTitre1';
-const contenuS5d2SousTitre1 = document.createTextNode('Math.random()');
+const contenuS5d2SousTitre1 = document.createTextNode(`Présentation des fonctions en JavaScript
+
+Math.random()`);
 s5d2SousTitre1.appendChild(contenuS5d2SousTitre1);
 
 const s5d2p1 = document.createElement('p');
@@ -753,9 +755,151 @@ document.getElementById('s5d2p4').innerHTML = prez2;
 
 //div 3 de la section 5
 const s5d3 = document.querySelector('#s5d3');
+
+//titre 1 de s5d3
 const s5d3SousTitre1 = document.createElement('h2');
 const contenuS5d3SousTitre1 = document.createTextNode('Les fonctions personnalisées');
 s5d3SousTitre1.appendChild(contenuS5d3SousTitre1);
 
+//paragraphe 1 de s5d3
+const s5d3p1 = document.createElement('p');
+s5d3p1.id = 's5d3p1'
+const contenuS5d3p1 = document.createTextNode(`En plus des nombreuses fonctions JavaScript prédéfinies et immédiatement utilisables, 
+nous allons pouvoir créer nos propres fonctions en JavaScript lorsque nous voudrons 
+effectuer une tâche très précise.
 
-s5d3.append(s5d3SousTitre1)
+Lorsqu’on crée une fonction en JavaScript, celle-ci n’est utilisable que par les scripts 
+qui ont accès à sa définition. Une fonction n’est pas « magiquement incluse » 
+dans le langage.
+
+Créer nos propres fonctions va nous permettre de gagner du temps de développement 
+et de créer des scripts plus facilement maintenables et plus sécurisés.
+
+En effet, imaginions que l’on crée un script complexe ou qu’on utilise du JavaScript 
+pour créer un site qui contient de nombreuses pages. Il y a de grandes chances 
+qu’on ait à effectuer plusieurs fois les mêmes opérations à différents endroits 
+de notre ou de nos script(s).
+
+Plutôt que de réécrire les mêmes blocs de codes encore et encore, on va plutôt créer 
+des fonctions qui vont contenir nos séries d’instruction. Une fois nos fonctions définies, 
+nous n’aurons plus qu’à les appeler là où on en a besoin.
+
+Procéder comme cela possède de multiples avantages : gain de temps de 
+développement mais également des scripts plus clairs et bien plus facilement 
+maintenable puisque si on doit un jour modifier une opération, il nous suffira 
+de modifier le code une fois dans la définition de notre fonction plutôt que de
+ modifier tous les blocs de code dans le cas où on aurait copié-collé les mêmes blocs 
+ de codes encore et encore dans nos scripts.
+
+Pour pouvoir utiliser une fonction personnalisée, en pratique, il faut déjà la définir. 
+Pour définir une fonction, on va utiliser le mot clef function suivi du nom que l’on 
+souhaite donner à notre fonction puis d’un couple de parenthèses dans lesquelles on peut 
+éventuellement définir des paramètres (je reviendrai là-dessus plus tard) et finalement 
+d’un couple d’accolades dans lesquelles on va placer le code de notre 
+fonction.
+
+Une fois notre fonction définie, on n’aura plus qu’à l’appeler pour l’utiliser. 
+
+Voyons immédiatement comment faire en pratique:
+
+On définit deux fonctions personnalisées.
+
+La fonction aleatoire() se sert de la fonction (méthode) random().
+La fonction multiplication() multiplie deux nombres entre eux.
+On utilise une instruction return pour que nos fonctions, une fois appelées,
+retounent le résultat de leur calcul afin qu'on puisse utiliser ce résultat.
+
+function aleatoire(){
+    return Math.random() * 100;
+};
+
+function multiplication(nombre1, nombre2){
+    //attention : les "+" sont utilisés pour la concaténation !
+    return nombre1 + ' x ' + nombre2 + ' = ' + (nombre1 * nombre2);
+};
+
+On appelle ou "invoque" ou encore "execute" nos fonctions et on place les resultats 
+retournés dans les paragraphes p id='p1' et p id='p2' d'un fichier HTML.
+On fournit ici deux arguments à multiplication() pour que la fonction s'execute 
+normalement. Ces arguments vont prendre la place des paramètres.
+
+document.getElementById('p1').innerHTML = aleatoire();
+
+document.getElementById('p2').innerHTML = multiplication(5, 10);`);
+s5d3p1.appendChild(contenuS5d3p1);
+
+const s5d3p2 = document.createElement('p');
+s5d3p2.id = 's5d3p2';
+
+const s5d3p3 = document.createElement('p');
+s5d3p3.id = 's5d3p3';
+
+const s5d3p4 = document.createElement('p');
+s5d3p4.id = 's5d3p4';
+const contenuS5d3p4 = document.createTextNode(`Par curiosité, essayons maintenant d'appeler la fonction aleatoire() comme parametre 
+de nombre1 dans la fonction multiplication (appeler une fonction dans une fonction...):
+document.getElementById('p3').innerHTML = multiplication(aleatoire(), 10);`)
+s5d3p4.appendChild(contenuS5d3p4)
+
+const s5d3p5 = document.createElement('p');
+s5d3p5.id = 's5d3p5';
+
+const s5d3p6 = document.createElement('p');
+s5d3p6.id = 's5d3p6';
+const contenuS5d3p6 = document.createTextNode(`Allez pour finir un petit grain de folie ;) :
+
+document.getElementById('p3').innerHTML = multiplication(aleatoire(), aleatoire());`);
+s5d3p6.appendChild(contenuS5d3p6);
+
+const s5d3p7 = document.createElement('p');
+s5d3p7.id = 's5d3p7';
+
+s5d3.append(s5d3SousTitre1, s5d3p1, s5d3p2, s5d3p3, s5d3p4, s5d3p5, s5d3p6, s5d3p7)
+
+function aleatoire(){
+    return Math.random() * 100;
+}
+document.getElementById('s5d3p2').innerHTML = 'resultat: ' + aleatoire();
+
+function multiplication(nombre1, nombre2){
+    //attention : les "+" sont utilisés pour la concaténation !
+    return 'resultat: ' + nombre1 + ' x ' + nombre2 + ' = ' + (nombre1 * nombre2);
+};
+document.getElementById('s5d3p3').innerHTML = multiplication(5, 10);
+
+document.getElementById('s5d3p5').innerHTML = multiplication(aleatoire(), 10);
+
+document.getElementById('s5d3p7').innerHTML = multiplication(aleatoire(), aleatoire());
+
+
+//div 4 de la section 5
+const s5d4 = document.querySelector('#s5d4');
+
+const s5d4SousTitre1 = document.createElement('h2');
+s5d4SousTitre1.id = 's5d4SousTitre1';
+const contenuS5d4SousTitre1 = document.createTextNode(`Récapitulatif sur les fonctions`);
+s5d4SousTitre1.appendChild(contenuS5d4SousTitre1);
+
+const s5d4p1 = document.createElement('p');
+s5d4p1.id = 's5d4p1';
+const contenuS5d4p1 = document.createTextNode(`Voici un petit résumé des choses importantes à retenir à ce niveau sur les fonctions :
+
+Les fonctions sont des blocs de code nommés et réutilisables et dont le but est d’effectuer une tâche précise ;
+
+Il existe deux grands types de fonctions en JavaScript : 
+les fonction natives ou prédéfinies (qui sont en fait des méthodes) qu’on n’aura qu’à appeler et les fonctions personnalisées qu’on va pouvoir créer ;
+
+Pour exécuter le code d’une fonction, il faut l’appeler. Pour cela, il suffit d’écrire son nom suivi d’un couple de parenthèses en passant éventuellement des arguments 
+dans les parenthèses ;
+
+On crée une fonction personnalisée grâce au mot clef function ;
+
+Si une fonction a besoin qu’on lui passe des valeurs pour fonctionner, alors on définira des paramètres lors de sa définition. 
+Lors de son appel, on lui passera des arguments qui prendront la place des arguments.`);
+s5d4p1.appendChild(contenuS5d4p1);
+
+
+
+
+
+s5d4.append(s5d4SousTitre1, s5d4p1)
