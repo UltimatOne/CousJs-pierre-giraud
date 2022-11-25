@@ -656,3 +656,106 @@ for  ( let i = 0; i < 10; i++ ){
     document.getElementById('s4d10p2').innerHTML += 
     'i1 stocke la valeur ' + i + ' lors du passage n°' +( i + 1 ) + ' dans la boucle<br>';
 };
+
+
+//Les fonctions
+//div 1 de la section 5
+const s5d1 = document.querySelector('#s5d1');
+const titreS5d1 = document.createElement(`h1`);
+titreS5d1.id = 'titreS5d1';
+const contenuTitreS5d1 = document.createTextNode('Les fonctions en JavaScript');
+titreS5d1.appendChild(contenuTitreS5d1);
+s5d1.appendChild(titreS5d1);
+
+//div 2 de la section 5
+const s5d2 = document.querySelector('#s5d2');
+
+const s5d2SousTitre1 = document.createElement('h2');
+s5d2SousTitre1.id = 's5d2SousTitre1';
+const contenuS5d2SousTitre1 = document.createTextNode('Math.random()');
+s5d2SousTitre1.appendChild(contenuS5d2SousTitre1);
+
+const s5d2p1 = document.createElement('p');
+const contenuS5d2p1 = document.createTextNode(`Math.random() génére un nombre décimal entre 0 et 1 qu'on place ici au sein de notre 
+paragraphe p id='p1'
+
+document.getElementById('p1').innerHTML = Math.random();
+
+Résultat:
+`)
+s5d2p1.appendChild(contenuS5d2p1);
+
+const s5d2p2 = document.createElement('p');
+s5d2p2.id = 's5d2p2';
+
+const s5d2SousTitre2 = document.createElement('h2');
+s5d2SousTitre2.id = 's5d2SousTitre2';
+const contenuS5d2SousTitre2 = document.createTextNode('string.replace()');
+s5d2SousTitre2.appendChild(contenuS5d2SousTitre2);
+
+const s5d2p3 = document.createElement('p');
+s5d2p3.id = 's5d2p3';
+const contenuS5d2p3 = document.createTextNode(`on déclare et initialise une variable:
+
+let prez = 'Bonjour, je suis Jean-Jacques.';
+
+string.replace() cherche une expression dans une chaine de caractères et la remplace 
+par une autre. Ici, on va chercher "Jean-Jacques" dans let prez et on remplace par 
+"Karine" avant d'afficher le résultat dans p id='p2'
+
+let prez2 = prez.replace('Jean-Jacques', 'Karine');
+
+document.getElementById('p2').innerHTML = prez2;
+
+Résultat:`);
+s5d2p3.appendChild(contenuS5d2p3);
+
+const s5d2p4 = document.createElement('p');
+s5d2p4.id = 's5d2p4';
+
+const s5d2p5 = document.createElement('p');
+s5d2p5.id = 's5d2p5';
+const contenuS5d2p5 = document.createTextNode(`L’intérêt principal des fonction prédéfinies est de nous permettre de réaliser des 
+opérations complexes de manière très simple : en les appelant, tout simplement. 
+En effet, vous devez bien comprendre que derrière ces noms de fonctions se cachent 
+des codes parfois longs et complexes qui vont être exécutés lorsqu’on appelle 
+la fonction et qui vont permettre de réaliser une opération précise 
+(générer un nombre aléatoire, etc.).
+
+En plus de cela, le code d’une fonction est réutilisable : cela veut dire qu’on va 
+pouvoir appeler une même fonction autant de fois qu’on le souhaite afin qu’elle 
+accomplisse plusieurs fois la même opération.
+
+Pour exécuter le code caché derrière la fonction, il suffit de l’appeler ou de 
+« l’invoquer ». Pour faire cela, on n’a qu’à écrire le nom de la fonction suivi 
+d’un couple de parenthèses et éventuellement préciser des arguments entre 
+les parenthèses.
+
+Les arguments d’une fonction sont des valeurs qu’on va passer à notre fonction afin 
+qu’elle fonctionne normalement ou pour préciser le comportement qu’elle doit 
+adopter. Certaines fonctions ne vont pas nécessiter d’arguments, d’autres vont avoir 
+besoin d’un argument, d’autres de deux, etc. De plus, certains arguments vont être 
+obligatoires tandis que d’autres vont être facultatifs.
+
+Par exemple, dans le cas de notre fonction replace(), il va falloir fournir en 
+premier argument l’expression à rechercher et à remplacer et en second argument 
+l’expression de remplacement pour que la fonction marche correctement.
+
+Au cours des prochaines parties, nous allons étudier de nombreuses fonctions 
+JavaScript prédéfinies et notamment celles qui vous seront le plus utiles lorsque vous 
+créerez vos propres scripts en JavaScript.`);
+s5d2p5.appendChild(contenuS5d2p5);
+s5d2.append(s5d2SousTitre1, s5d2p1, s5d2p2, s5d2SousTitre2, s5d2p3, s5d2p4, s5d2p5);
+document.getElementById('s5d2p2').innerHTML = Math.random();
+let prez = 'Bonjour, je suis Jean-Jacques.';
+let prez2 = prez.replace('Jean-Jacques', 'Karine');
+document.getElementById('s5d2p4').innerHTML = prez2;
+
+//div 3 de la section 5
+const s5d3 = document.querySelector('#s5d3');
+const s5d3SousTitre1 = document.createElement('h2');
+const contenuS5d3SousTitre1 = document.createTextNode('Les fonctions personnalisées');
+s5d3SousTitre1.appendChild(contenuS5d3SousTitre1);
+
+
+s5d3.append(s5d3SousTitre1)

@@ -72,6 +72,6 @@ tfoot {
 .m10{
     margin-left: 10%;
 }
-p, span{
+p, h1, span{
     white-space:pre
 }
