@@ -1412,7 +1412,287 @@ document.getElementById('s5d9p3').innerHTML = resultatDiv;***/
 s5d9p4.appendChild(contenuS5d9p4);
 
 
+
 //Fonctions anonymes, auto-invoquées et récursives en JavaScript
-const s5d10 = document.querySelector('s510');
+const s5d10 = document.querySelector('#s5d10');
+
+//création des éléments à injecter dans l'emplacement
+const s5d10SousTitre = document.createElement('h2');
+s5d10SousTitre.id = 's5d10SousTitre';
+const s5d10p1 = document.createElement('p');
+s5d10p1.id = 's5d10p1';
+
+//Injection des éléments dans l'emplacement
+s5d10.append(s5d10SousTitre, s5d10p1);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d10SousTitre = document.createTextNode(`Fonctions anonymes, auto-invoquées et récursives en JavaScript`);
+
+const contenuS5d10p1 = document.createTextNode(`Dans cette nouvelle leçon, nous allons aller un peu plus loin dans notre étude des fonctions JavaScript en nous penchant sur le cas des fonctions anonymes et comment les appeler 
+ainsi que sur les fonctions récursives.`);
+
+//injection des contenus dans leurs éléments respectif
+s5d10SousTitre.appendChild(contenuS5d10SousTitre);
+s5d10p1.appendChild(contenuS5d10p1);
 
 
+
+//Qu’est-ce qu’une fonction anonyme et quels sont les cas d’usage ?
+const s5d11 = document.querySelector('#s5d11');
+
+//création des éléments à injecter dans l'emplacement
+const s5d11SousTitre = document.createElement('h3');
+s5d11SousTitre.id = 's5d11SousTitre';
+const s5d11p1 = document.createElement('p');
+s5d11p1.id = 's5d11p1';
+
+//Injection des éléments dans l'emplacement
+s5d11.append(s5d11SousTitre, s5d11p1);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d11SousTitre = document.createTextNode(`Qu’est-ce qu’une fonction anonyme et quels sont les cas d’usage ?`);
+
+const contenuS5d11p1 = document.createTextNode(`Les fonctions anonymes sont, comme leur nom l’indique, des fonctions qui ne vont pas posséder de nom. En effet, lorsqu’on crée une fonction, nous ne sommes pas obligés 
+de lui donner un nom à proprement parler.
+
+Généralement, on utilisera les fonctions anonymes lorsqu’on n’a pas besoin d’appeler notre fonction par son nom c’est-à-dire lorsque le code de notre fonction n’est appelé qu’à 
+un endroit dans notre script et n’est pas réutilisé.
+
+En d’autres termes, les fonctions anonymes vont très souvent simplement nous permettre de gagner un peu de temps dans l’écriture de notre code et (bien que cela porte à débat) 
+à le rendre plus clair en ne le polluant pas avec des noms inutiles.`);
+
+//injection des contenus dans leurs éléments respectif
+s5d11SousTitre.appendChild(contenuS5d11SousTitre);
+s5d11p1.appendChild(contenuS5d11p1);
+
+
+
+//Création et exécution ou appel d’une fonction anonyme
+const s5d12 = document.querySelector('#s5d12');
+
+//création des éléments à injecter dans l'emplacement
+const s5d12SousTitre = document.createElement('h3');
+s5d12SousTitre.id = 's5d12SousTitre';
+const s5d12p1 = document.createElement('p');
+s5d12p1.id = 's5d12p1';
+s5d12p1.style.textAlign = 'justify';
+
+//Injection des éléments dans l'emplacement
+s5d12.append(s5d12SousTitre, s5d12p1);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d12SousTitre = document.createTextNode(`Création et exécution ou appel d’une fonction anonyme`);
+
+const contenuS5d12p1 = document.createTextNode(`On va pouvoir créer une fonction anonyme de la même façon qu’une fonction classique, 
+en utilisant le mot clef function mais en omettant le nom de la fonction après.
+
+Regardez plutôt le code ci-dessous :
+
+function(){
+    alert('Alerte exécutée par une fonction anonyme');
+};
+
+Nous avons ici déclaré une fonction anonyme donc le rôle est d’exécuter une fonction 
+alert() qui va elle-même renvoyer le message « Alerte exécutée par une fonction 
+anonyme » dans une boite d’alerte.
+
+A ce niveau, pourtant, nous faisons face à un problème : comment appeler une fonction 
+qui n’a pas de nom ?
+
+On va avoir plusieurs façons de faire en JavaScript. Pour exécuter une fonction 
+anonyme, on va notamment pouvoir :
+
+Enfermer le code de notre fonction dans une variable et utiliser la variable comme 
+une fonction ;
+
+Auto-invoquer notre fonction anonyme ;
+
+Utiliser un évènement pour déclencher l’exécution de notre fonction.`);
+
+//injection des contenus dans leurs éléments respectif
+s5d12SousTitre.appendChild(contenuS5d12SousTitre);
+s5d12p1.appendChild(contenuS5d12p1);
+
+
+//Exécuter une fonction anonyme en utilisant une variable
+const s5d13 = document.querySelector('#s5d13');
+
+//création des éléments à injecter dans l'emplacement
+const s5d13SousTitre1 = document.createElement('h3');
+s5d13SousTitre1.id = 's5d13SousTitre1';
+const s5d13p1 = document.createElement('p');
+s5d13p1.id = 's5d13p1';
+s5d13p1.style.textAlign = 'justify';
+
+//Injection des éléments dans l'emplacement
+s5d13.append(s5d13SousTitre1, s5d13p1);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d13SousTitre1 = document.createTextNode(`Exécuter une fonction anonyme en utilisant une variable`);
+
+const contenuS5d13p1 = document.createTextNode(`Voyons ces différentes façons de faire en détail, en commençant par la plus simple :
+
+enfermer la fonction dans une variable et utiliser la variable comme une fonction.
+
+let alerte = function(){
+    alert('Alerte exécutée par une fonction anonyme');
+};
+alerte();
+
+Note: Ce code est commenté dans mon fichier JavaScript pour éviter une exécution 
+intempestive.
+
+Ici, on affecte notre fonction anonyme à une variable nommée let alerte. 
+Notre variable contient donc ici une valeur complexe qui est une fonction et on va 
+désormais pouvoir l’utiliser comme si c’était une fonction elle-même.
+
+Pour « appeler notre variable » et pour exécuter le code de la fonction anonyme 
+qu’elle contient, il va falloir écrire le nom de la variable suivi d’un couple de parenthèses. 
+Ces parenthèses sont des parenthèses dites « appelantes » car elles servent à exécuter 
+la fonction qui les précède.`);
+
+
+//injection des contenus dans leurs éléments respectif
+s5d13SousTitre1.appendChild(contenuS5d13SousTitre1);
+s5d13p1.appendChild(contenuS5d13p1);
+
+//Exécuter une fonction anonyme en utilisant une variable
+const s5d14 = document.querySelector('#s5d14');
+
+//création des éléments à injecter dans l'emplacement
+const s5d14SousTitre1 = document.createElement('h3');
+s5d14SousTitre1.id = 's5d14SousTitre2';
+const s5d14p1 = document.createElement('p');
+s5d14p1.id = 's5d14p1';
+s5d14p1.style.textAlign = 'justify';
+
+//Injection des éléments dans l'emplacement
+s5d14.append(s5d14SousTitre1, s5d14p1);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d14SousTitre1 = document.createTextNode(`Auto-invoquer une fonction anonyme`);
+
+const contenuS5d14p1 = document.createTextNode(`La deuxième façon d’exécuter une fonction anonyme va être de créer une fonction 
+anonyme qui va s’auto-invoquer c’est-à-dire qui va s’invoquer (ou s’appeler ou encore 
+s’exécuter) elle-même dès sa création.
+
+Pour créer une fonction auto-invoquée à partir d’une fonction, il va tout simplement 
+falloir rajouter un couple de parenthèses autour de la fonction et une seconde après 
+le code de la fonction.
+
+Nous avons vu précédemment que le couple de parenthèses suivant le nom de notre 
+variable stockant notre fonction anonyme servait à lancer l’exécution de la fonction.
+
+De la même manière, le couple de parenthèses après la fonction va faire en sorte que la 
+fonction s’appelle elle-même.
+
+
+//Fonction anonyme auto-invoquée
+(function(){alert('Alerte exécutée par une fonction anonyme')})();
+
+//Fonction nommée auto-invoquée
+(function bonjour(){alert('Bonjour !')})();
+
+Note: Ce code est commenté dans mon fichier JavaScript pour éviter une exécution 
+intempestive.
+
+Vous pouvez noter deux choses à propos des fonction auto-invoquées. Tout d’abord, 
+vous devez savoir que la notion d’auto-invocation n’est pas réservée qu’aux fonctions 
+anonymes : on va tout à fait pouvoir auto-invoquer une fonction qui possède un nom. 
+Cependant, en pratique, cela n’aura souvent pas beaucoup d’intérêt (puisque si une 
+fonction possède un nom, on peut tout simplement l’appeler en utilisant ce nom).
+
+Ensuite, vous devez bien comprendre que lorsqu’on auto-invoque une fonction, la 
+fonction s’exécute immédiatement et on n’a donc pas de flexibilité par rapport à cela : 
+une fonction auto-invoquée s’exécutera toujours juste après sa déclaration.`);
+
+//injection des contenus dans leurs éléments respectif
+s5d14SousTitre1.appendChild(contenuS5d14SousTitre1);
+s5d14p1.appendChild(contenuS5d14p1);
+
+
+
+//Exécuter une fonction anonyme en utilisant une variable
+const s5d15 = document.querySelector('#s5d15');
+
+//création des éléments à injecter dans l'emplacement
+const s5d15SousTitre1 = document.createElement('h3');
+s5d15SousTitre1.id = 's5d15SousTitre2';
+const s5d15p1 = document.createElement('p');
+s5d15p1.id = 's5d15p1';
+s5d15p1.style.textAlign = 'justify';
+const s5d15p2 = document.createElement('p');
+s5d15p2.id = 's5d15p2';
+const s5d15p3 = document.createElement('p');
+s5d15p3.id = 's5d15p3';
+const s5d15p4 = document.createElement('p');
+s5d15p4.id = 's5d15p4';
+s5d15p4.style.textAlign = 'justify';
+
+//Injection des éléments dans l'emplacement
+s5d15.append(s5d15SousTitre1, s5d15p1, s5d15p2, s5d15p3, s5d15p4);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d15SousTitre1 = document.createTextNode(`Exécuter une fonction anonyme lors du déclenchement d’un évènement`);
+
+const contenuS5d15p1 = document.createTextNode(`On va enfin également pouvoir rattacher nos fonctions anonymes à ce qu’on appelle 
+des « gestionnaires d’évènements » en JavaScript.
+
+Le langage JavaScript va en effet nous permettre de répondre à des évènements, 
+c’est-à-dire d’exécuter certains codes lorsqu’un évènement survient.
+
+Le JavaScript permet de répondre à de nombreux types d’évènements : clic sur un 
+élément, pressage d’une touche sur un clavier, ouverture d’une fenêtre, etc.
+
+Pour indiquer comment on veut répondre à tel évènement, on utilise des gestionnaires 
+d’évènements qui sont des fonctions qui vont exécuter tel code lorsque tel évènement 
+survient.
+
+Les évènements vont faire l’objet d’une prochaine partie et je ne veux pas trop en parler 
+pour le moment. Notez simplement qu’on va pouvoir passer une fonction anonyme à un 
+gestionnaire d'évènement qui va l’exécuter dès le déclenchement de l’évènement que le 
+gestionnaire prend en charge.
+
+Pour un exemple concret du fonctionnement général de la prise en charge d’évènements 
+et de l’utilisation des fonctions anonymes, 
+
+vous pouvez regarder l’exemple ci-dessous :
+
+//Représentent nos paragraphes p id='p1' et p id='p2'
+
+let para1 = document.getElementById('p1');
+let para2 = document.getElementById('p2');
+
+/*On utilise la fonction addEventListener() qui sert de gestionnaire
+ *d'évènement. Ici, on demande à exécuter la fonction anonyme passé en
+ *deuxième argument lors de l'évènement "click" (clic) que l'élément
+ *p id='p1' ou p id='p2'*/
+
+para1.addEventListener('click', function(){alert('Clic sur p id=p1');});
+para2.addEventListener('click', function(){alert('Clic sur p id=p2');});`);
+
+const contenuS5d15p2 = document.createTextNode(`Résultats:
+
+Paragraphe 1`);
+const contenuS5d15p3 = document.createTextNode(`Paragraphe 2`);
+const contenuS5d15p4 = document.createTextNode(`Ce code contient beaucoup de notions que nous n’avons pas étudiées et que je ne vais 
+pas expliquer en détail pour le moment. Tout ce que vous devez savoir ici est que la 
+fonction (ou plus exactement la méthode) addEventListener() permet d’exécuter un code 
+lors de la capture (lors du déclenchement) d’un évènement particulier qu’on va lui 
+préciser en premier argument.`);
+
+//injection des contenus dans leurs éléments respectif
+s5d15SousTitre1.appendChild(contenuS5d15SousTitre1);
+s5d15p1.appendChild(contenuS5d15p1);
+s5d15p2.appendChild(contenuS5d15p2);
+s5d15p3.appendChild(contenuS5d15p3);
+s5d15p4.appendChild(contenuS5d15p4);
+
+let para1 = document.getElementById('s5d15p2');
+let para2 = document.getElementById('s5d15p3');
+para1.addEventListener('click', function(){
+    alert('Clic sur p id=p1');
+});
+para2.addEventListener('click', function(){
+    alert('Clic sur p id=p2');
+});
