@@ -1106,29 +1106,41 @@ document.getElementById('s5d7p5').innerHTML =
 
 
 //Les différences de portée entre les variables var et let en JavaScript
+
+//selection de l'emplacement par son id
 const s5d8 = document.querySelector('#s5d8');
 
+//création des éléments à injecter dans l'emplacement
 const s5d8SousTitre = document.createElement('h2');
 s5d8SousTitre.id = 's5d8SousTitre';
-
-const contenuS5d8SousTitre = document.createTextNode(`Les différences de portée entre les variables 
-var et let en JavaScript`);
-s5d8SousTitre.appendChild(contenuS5d8SousTitre);
 
 const s5d8p1 = document.createElement('p');
 s5d8p1.id = 's5d8p1';
 s5d8p1.style.textAlign = 'justify';
+
 const s5d8p2 = document.createElement('p');
 s5d8p2.id = 's5d8p2';
+
 const s5d8p3 = document.createElement('p');
 s5d8p3.id = 's5d8p3';
+
 const s5d8p4 = document.createElement('p');
 s5d8p4.id = 's5d8p4';
+
 const s5d8p5 = document.createElement('p');
 s5d8p5.id = 's5d8p5';
+
 const s5d8p6 = document.createElement('p');
 s5d8p6.id = 's5d8p6';
 s5d8p6.style.textAlign = 'justify';
+
+//Injection des éléments dans l'emplacement
+s5d8.append(s5d8SousTitre, s5d8p1, s5d8p2, s5d8p3, s5d8p4, s5d8p5,s5d8p6);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d8SousTitre = document.createTextNode(`Les différences de portée entre les variables 
+var et let en JavaScript`);
+
 const contenuS5d8p1 = document.createTextNode(`Dans l’exemple précédent, on n’a pu observer aucune différence de comportement 
 entre une variable déclarée avec la syntaxe let et une variable déclarée avec var 
 en JavaScript.
@@ -1159,7 +1171,6 @@ function portee4(){
 }
 
 portee4();`);
-s5d8p1.appendChild(contenuS5d8p1);
 
 const contenuS5d8p6 = document.createTextNode(`
 Ici, on crée une fonction portee4() qui contient deux variables let x14 et var y14 ainsi 
@@ -1184,8 +1195,11 @@ Par ailleurs, notez qu’il est considéré comme une mauvaise pratique de décl
 plusieurs variables dans différents espaces en utilisant un même nom car cela peut 
 poser des problèmes évidents de clarté et de lisibilité du code. 
 On essaiera donc tant que possible d’éviter de faire cela.`);
-s5d8p6.appendChild(contenuS5d8p6);
-s5d8.append(s5d8SousTitre, s5d8p1, s5d8p2, s5d8p3, s5d8p4, s5d8p5,s5d8p6);
+
+
+//injection des contenus dans leurs éléments respectif
+s5d8SousTitre.appendChild(contenuS5d8SousTitre);
+s5d8p1.appendChild(contenuS5d8p1);
 
 function portee4(){
     let x14 = 1;
@@ -1203,13 +1217,202 @@ x14 (dans if) = ` + x14;
 }
 portee4();
 
-
-
-
-
-
+s5d8p6.appendChild(contenuS5d8p6);
 
 
 
 //Les valeurs de retour des fonctions
-//const s5d9 = document.querySelector('#s5d9');
+const s5d9 = document.querySelector('#s5d9');
+
+
+//création des éléments à injecter dans l'emplacement
+const s5d9SousTitre = document.createElement('h2');
+s5d9SousTitre.id = 's5d9SousTitre';
+
+const s5d9p1 = document.createElement('p');
+s5d9p1.id = 's5d9p1';
+s5d9p1.style.textAlign = 'justify';
+
+const s5d9p2 = document.createElement('p');
+s5d9p2.id = 's5d9p2';
+
+const s5d9p3 = document.createElement('p');
+s5d9p3.id = 's5d9p3';
+
+const s5d9p4 = document.createElement('p');
+s5d9p4.id = 's5d9p4';
+s5d9p4.style.textAlign = 'justify';
+
+
+
+//Injection des éléments dans l'emplacement
+s5d9.append(s5d9SousTitre, s5d9p1, s5d9p2, s5d9p3, s5d9p4);
+
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d9SousTitre = document.createTextNode(`Les valeurs de retour des fonctions`);
+
+const contenuS5d9p1 = document.createTextNode(`Un autre concept essentiel à bien comprendre pour maitriser les fonctions en 
+JavaScript est celui de « valeur de retour ».
+
+Une valeur de retour est une valeur renvoyée par une fonction une fois que celle-ci a 
+terminé son exécution. Une valeur de retour ne doit pas être confondu avec une 
+instruction d’affichage durant l’exécution d’une fonction, comme dans le cas d’une 
+fonction qui possède à un moment donné dans son code un alert() par exemple.
+
+Une valeur de retour est une valeur unique qui va être renvoyée par la fonction 
+après son exécution et qu’on va pouvoir récupérer pour la manipuler dans notre 
+script.
+
+Certaines fonctions prédéfinies vont renvoyer une valeur de retour tandis que d’autres 
+ne vont pas en renvoyer.
+
+Il est toujours très utile de savoir si une fonction prédéfinie en JavaScript va renvoyer 
+une valeur ou pas et quel type de valeur la fonction va renvoyer puisque cela va nous 
+permettre de savoir quoi faire après l’exécution de la fonction et d’éventuellement 
+recueillir la valeur de retour pour effectuer différentes opérations.
+
+Par exemple, certaines fonctions JavaScript renvoient le booléen true si elles ont réussi 
+à effectuer leur tâche ou false en cas d’échec. Dans ce cas, on va pouvoir utiliser une 
+condition autour de ces fonctions pour prendre en charge et donner des instructions en 
+cas d’échec de notre fonction.
+
+D’autres fonctions vont renvoyer directement le résultat de leur action, comme la 
+fonction replace() par exemple qui va renvoyer une nouvelle chaine de caractères avec 
+les remplacements effectués.
+
+Dans le cas de fonctions personnalisées, nous allons devoir décider si notre fonction va 
+renvoyer une valeur ou pas.
+
+Pour que nos fonctions renvoient une valeur, il va falloir utiliser une instruction return. 
+Cette instruction va nous permettre de retourner le résultat de la fonction ou une valeur 
+de notre choix qu’on va ensuite pouvoir soit manipuler immédiatement soit stocker 
+dans une variable pour effectuer différentes opérations avec cette valeur.
+
+Attention cependant : l’instruction return met fin à l’exécution d’une fonction, ce qui 
+signifie que toutes les autres opérations qui suivent une instruction return dans une 
+fonction seront ignorées.
+
+Pour cette raison, on fera toujours bien attention à placer l’instruction return en fin 
+de fonction, après que toutes les opérations aient été réalisées.
+
+Regardez le code ci-dessous :
+
+let prez3 = 'Bonjour, je suis Jean-Jacques';
+
+/*On récupère la valeur renvoyée par replace() qu'on place dans une
+ *variable nommée let resultatReplace*/
+
+let resultatReplace = prez3.replace('jour', 'soir');
+
+//On peut ensuite utiliser notre variable pour différentes opérations
+
+document.getElementById('p1').innerHTML = resultatReplace + ' Goddet';
+
+/*La fonction div() accepte deux nombres en arguments et retourne le résultat
+ *de la division de l'un par l'autre ou le message "Divison par 0 impossible"
+ *si le deuxième nombre est égal à 0*/
+
+function div(a15, b15){
+    if(( a15 == 0 ) || ( b15 == 0 )){
+        return 'Divison par 0 impossible';
+    }else{
+        return a15 / b15;
+        alert('Ce message ne s\'affiche jamais !');
+    };
+};
+let nombre3 = prompt('Entrez un premier nombre');
+let nombre4 = prompt('Entrez un deuxième nombre');
+let resultatDiv = div(nombre3, nombre4);
+document.getElementById('p2').innerHTML = resultatDiv;
+
+/*La fonction prompt() ouvre une boite de dialogue qui permet à l'utilisateur
+ *d'envoyer des données. 
+ *Ici, on demande deux nombres à l'utilisateur et on les place dans les variables 
+ *nombre3 et nombre4. On les utilise ensuite comme arguments de notre fonction 
+ *div()*/
+
+/*On exécute notre fonction en lui passant les nombres envoyés en argument et
+ *on affiche le résultat dans le paragraphe p id='p2'*/
+
+`);
+
+const contenuS5d9p4 = document.createTextNode(`Dans cet exemple, on commence par utiliser la fonction JavaScript prédéfinie replace() 
+en utilisant la syntaxe prez.replace(). Vous n’avez pas besoin de comprendre cette 
+syntaxe pour le moment mais pour faire simple vous pouvez retenir qu’on a besoin 
+d’une chaine de caractères pour exécuter replace() et cette chaine de caractères est ici 
+contenue dans notre variable prez.
+
+On sait que replace() renvoie une nouvelle chaine de caractères avec les remplacements 
+demandés en valeur de retour. Ici, on récupère cette valeur de retour dans une variable 
+let resultatReplace qu’on utilise ensuite.
+
+En dessous, on crée une fonction div() dont le rôle est de diviser un nombre par un autre. 
+Dans le code de notre fonction, on isole le cas où le dénominateur est égal à 0. 
+Dans ce cas-là, notre fonction renvoie la chaine « division par 0 impossible ». 
+Dans tous les autres cas, notre fonction renvoie le résultat de la division.
+
+Notez que j’ai également placé une instruction alert() après return dans le else de ma 
+fonction pour vous montrer qu’elle ne sera jamais exécutée (car elle se situe après 
+l’instruction return qui met fin à la fonction.
+
+Finalement, on demande aux utilisateurs de nous envoyer deux nombres qu’on passera 
+en arguments de notre fonction div(). Pour cela, on utilise une fonction prompt(). 
+Cette fonction ouvre une boite de dialogue et permet aux utilisateurs de nous envoyer 
+des données.
+
+Note : Dans le code du fichier javaScript que j'utilise, j’ai commenté les instructions 
+de la fonction div(), de prompt() et ce qui se trouve en dessous pour éviter que des boites 
+de dialogue n’apparaissent au milieu de votre lecture et vous gênent.`);
+
+
+//injection des contenus dans leurs éléments respectif
+s5d9SousTitre.appendChild(contenuS5d9SousTitre);
+s5d9p1.appendChild(contenuS5d9p1);
+let prez3 = 'Bonjour, je suis Jean-Jacques';
+
+/*On récupère la valeur renvoyée par replace() qu'on place dans une
+ *variable nommée let resultatReplace*/
+
+
+let resultatReplace = prez3.replace('jour', 'soir');
+
+//On peut ensuite utiliser notre variable pour différentes opérations
+
+document.getElementById('s5d9p2').innerHTML = `Résultats: 
+
+` + resultatReplace + ' Goddet';
+
+/*La fonction div() accepte deux nombres en arguments et retourne le résultat
+ *de la division de l'un par l'autre ou le message "Divison par 0 impossible"
+ *si le deuxième nombre est égal à 0*/
+
+/***function div(a15, b15){
+    if(( a15 == 0 ) || ( b15 == 0 )){
+        return 'Divison par 0 impossible';
+    }else{
+        return a15 / b15;
+        alert('Ce message ne s\'affiche jamais !');
+    };
+};
+let nombre3 = prompt('Entrez un premier nombre');
+let nombre4 = prompt('Entrez un deuxième nombre');
+let resultatDiv = div(nombre3, nombre4);
+document.getElementById('s5d9p3').innerHTML = resultatDiv;***/
+
+/*La fonction prompt() ouvre une boite de dialogue qui permet à l'utilisateur
+ *d'envoyer des données. 
+ *Ici, on demande deux nombres à l'utilisateur et on les place dans les variables 
+ *nombre3 et nombre4. On les utilise ensuite comme arguments de notre fonction 
+ *div()*/
+
+
+/*On exécute notre fonction en lui passant les nombres envoyés en argument et
+ *on affiche le résultat dans le paragraphe p id='p2'*/
+s5d9p4.appendChild(contenuS5d9p4);
+
+
+//Fonctions anonymes, auto-invoquées et récursives en JavaScript
+const s5d10 = document.querySelector('s510');
+
+
