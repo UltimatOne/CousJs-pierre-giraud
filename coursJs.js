@@ -897,9 +897,223 @@ On crée une fonction personnalisée grâce au mot clef function ;
 Si une fonction a besoin qu’on lui passe des valeurs pour fonctionner, alors on définira des paramètres lors de sa définition. 
 Lors de son appel, on lui passera des arguments qui prendront la place des arguments.`);
 s5d4p1.appendChild(contenuS5d4p1);
-
-
-
-
-
 s5d4.append(s5d4SousTitre1, s5d4p1)
+
+
+//les portées
+const s5d5 = document.querySelector('#s5d5');
+const s5d5SousTitre = document.createElement('h2');
+s5d5SousTitre.id = "s5d5SousTitre"
+const contenuS5d5SousTitre = document.createTextNode('Portée des variables et retour des fonctions en JavaScript');
+s5d5SousTitre.appendChild(contenuS5d5SousTitre);
+const s5d5p1 = document.createElement('p');
+s5d5p1.id = 's5d5p1'
+const contenuS5d5p1 = document.createTextNode(`Dans cette nouvelle leçon sur les fonctions JavaScript, nous allons étudier en détail la notion de valeur de retour d’une fonction et allons également discuter 
+d’un concept essentiel à la bonne compréhension du JavaScript et des fonctions : la portée des variables.`)
+s5d5p1.appendChild(contenuS5d5p1)
+s5d5.append(s5d5SousTitre, s5d5p1)
+
+//La notion de portée des variables : définition
+const s5d6 = document.querySelector('#s5d6');
+const s5d6SousTitre = document.createElement('h2');
+s5d6SousTitre.id = 's5d6SousTitre'
+const contenuS5d6SousTitre = document.createTextNode('La notion de portée des variables : définition');
+s5d6SousTitre.appendChild(contenuS5d6SousTitre);
+const s5d6p1 = document.createElement('p');
+s5d6p1.id = 's5d6p1';
+const contenuS5d6p1 = document.createTextNode(`Il est indispensable de bien comprendre la notion de « portée » des variables 
+lorsqu’on travaille avec les fonctions en JavaScript.
+
+La « portée » d’une variable désigne l’espace du script dans laquelle elle va être 
+accessible. En effet, toutes nos variables ne sont pas automatiquement disponibles à 
+n’importe quel endroit dans un script et on ne va donc pas toujours pouvoir les utiliser.
+
+En JavaScript, il n’existe que deux espaces de portée différents : l’espace global et 
+l’espace local. Pour rester très simple, l’espace global désigne l’entièreté d’un script 
+à l’exception de l’intérieur de nos fonctions. L’espace local désigne, à l’inverse, 
+l’espace dans une fonction.
+
+Ici, vous devez bien retenir la chose suivante : une variable définie dans l’espace 
+global d’un script va être accessible à travers tout le script, même depuis une fonction. 
+En revanche, une variable définie dans une fonction n’est accessible que dans cette 
+même fonction et ne peut pas être manipulée depuis l’espace global du script.
+
+Cette notion de portée est une notion qu’on retrouve dans de nombreux langages 
+informatiques. La portée permet de « protéger » certains codes et certaines variables 
+en les rendant inaccessibles depuis l’extérieur. Cela permet de renforcer la sécurité 
+d’un script et sa stabilité dans le cas où on ne voudrait pas qu’un utilisateur puisse 
+modifier la valeur d’une variable depuis l’extérieur pour des raisons de cohérence 
+et de logique du script.`);
+s5d6p1.appendChild(contenuS5d6p1)
+s5d6.append(s5d6SousTitre, s5d6p1)
+
+//Illustration de la notion de portée des variables en JavaScript : exemple pratique
+const s5d7 = document.querySelector('#s5d7');
+const s5d7SousTitre = document.createElement('h2');
+s5d7SousTitre.id = 's5d7SousTitre'
+const contenuS5d7SousTitre = document.createTextNode(`Illustration de la notion de portée des variables en 
+JavaScript : exemple pratique`);
+s5d7SousTitre.appendChild(contenuS5d7SousTitre);
+const s5d7p1 = document.createElement('p');
+s5d7p1.id = 's5d7p1';
+const contenuS5d7p1 = document.createTextNode(`Regardez l’exemple suivant pour bien comprendre la notion de portée 
+des variables et les subtilités liées à la déclaration des variables dans différents 
+espaces de portée:
+
+//On déclare deux variables globales
+let x13 = 5;
+var y13 = 10;
+
+//On définit une première fonction qui utilise les variables globales
+
+function portee1(){
+    document.getElementById('p1').innerHTML =
+    'Depuis portee1() : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
+};
+
+//On définit une deuxieme fonction qui définit des variables locales
+
+function portee2(){
+    let a13 = 1;
+    var b13 = 2;
+    document.getElementById('p2').innerHTML =
+    'Depuis portee2() : <br>a13 = ' + a13 + '<br>b13 = ' + b13;
+};
+
+//On définit une troisième fonction qui définit également des variables locales
+
+function portee3(){
+    let x13 = 20;
+    var y13 = 40;
+    document.getElementById('p3').innerHTML =
+    'Depuis portee3() : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
+};
+
+//On pense à bien exécuter nos fonctions !
+
+portee1();
+portee2();
+portee3();
+
+//On tente d'afficher des variables globales puis locales depuis l'espace global
+
+document.getElementById('p4').innerHTML =
+'Depuis l'espace global : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
+
+document.getElementById('p5').innerHTML =
+'Depuis l'espace global : <br>a13 = ' + a13 + '<br>b13 = ' + b13;`);
+s5d7p1.appendChild(contenuS5d7p1);
+const s5d7p2 = document.createElement('p');
+s5d7p2.id = 's5d7p2';
+const s5d7p3 = document.createElement('p');
+s5d7p3.id = 's5d7p3';
+const s5d7p4 = document.createElement('p');
+s5d7p4.id = 's5d7p4';
+const s5d7p5 = document.createElement('p');
+s5d7p5.id = 's5d7p5';
+const s5d7p6 = document.createElement('p');
+s5d7p6.id = 's5d7p6';
+const s5d7p7 = document.createElement('p');
+s5d7p7.id = 's5d7p7';
+const contenuS5d7p7 = document.createTextNode(`Dans ce script, on commence par déclarer et par initialiser deux variables let x13 et 
+var y13 dans l’espace global de notre script et en utilisant la nouvelle notation avec 
+let et l’ancienne avec var. Pour cette leçon, je vais utiliser à chaque fois les deux 
+notations afin d’illustrer les différences subtiles liées à la portée entre ces deux façons 
+de déclarer des variables.
+
+Ensuite, nous allons créer trois fonctions qui vont utiliser des variables globales 
+ou définir leurs propres variables. 
+Notre fonction portee1() utilise par exemple nos variables let x13 et var y13. Comme 
+ces variables ont été déclarées dans l’espace global, elles sont donc accessibles 
+et utilisables dans la totalité du script et notamment dans des fonctions.
+
+Notre deuxième fonction portee2() déclare ses propres variables let a13 et var b13. Ces 
+variables sont donc des variables locales à cette fonction et ne vont 
+pouvoir être utilisées que depuis cette fonction.
+
+Finalement, notre troisième fonction portee3() va également définir deux variables 
+locales let x13 et var y13. Ici, la situation est plus complexe que précédemment à 
+comprendre puisqu’on a deux variables let x13 et deux variables var y13 : 
+une définie dans l’espace global et l’autre définie dans la fonction à chaque fois.
+
+Ici, vous devez bien comprendre que les variables let x13 globale et let x13 locale, 
+bien qu’elles possèdent le même nom, sont deux entités totalement différentes 
+(et de même pour var y13 globale et locale).
+
+Dans ce cas-là, notre fonction va utiliser les variables définies localement plutôt 
+que celles définies dans l’espace global.
+
+De plus, comme les variables locales et globales ne sont pas les mêmes entités, 
+elles vont agir indépendamment et ainsi modifier la valeur de let x13 locale ne 
+modifiera pas la valeur de la variable globale et inversement.
+
+On voit bien cela lorsqu’on tente d’afficher les valeurs de let x13 et de var y13 depuis 
+l’espace global : ici, ce sont les variables globales qui sont utilisées prioritairement 
+et on voit que les valeurs qu’elles contiennent n’ont pas été modifiées par la fonction 
+portee3().
+
+Finalement, on essaie d’afficher les valeurs de nos variables let a13 et var b13 définies 
+localement depuis l’espace global. Comme ces variables sont locales, elles ne sont pas 
+accessibles depuis l’espace global et une erreur va être émise par le JavaScript 
+dans ce cas.`)
+s5d7p7.appendChild(contenuS5d7p7);
+s5d7.append(s5d7SousTitre, s5d7p1, s5d7p2, s5d7p3, s5d7p4, s5d7p5, s5d7p6, s5d7p7);
+
+//On déclare deux variables globales
+let x13 = 5;
+var y13 = 10;
+
+//On définit une première fonction qui utilise les variables globales
+function portee1(){
+    document.getElementById('s5d7p2').innerHTML =
+    'Depuis portee1() : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
+};
+
+//On définit une deuxieme fonction qui définit des variables locales
+function portee2(){
+    let a13 = 1;
+    var b13 = 2;
+    document.getElementById('s5d7p3').innerHTML =
+    'Depuis portee2() : <br>a13 = ' + a13 + '<br>b13 = ' + b13;
+};
+
+//On définit une troisième fonction qui définit également des variables locales
+function portee3(){
+    let x13 = 20;
+    var y13 = 40;
+    document.getElementById('s5d7p4').innerHTML =
+    'Depuis portee3() : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
+};
+
+//On pense à bien exécuter nos fonctions !
+portee1();
+portee2();
+portee3();
+
+//On tente d'afficher des variables globales puis locales depuis l'espace global
+document.getElementById('s5d7p5').innerHTML =
+'Depuis l\'espace global : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
+
+document.getElementById('s5d7p6').innerHTML =
+'Depuis l\'espace global : <br>a13 = ' + a13 + '<br>b13 = ' + b13;
+
+//Les différences de portée entre les variables var et let en JavaScript
+const s5d8 = document.querySelector('#s5d8');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Les valeurs de retour des fonctions
+const s5d9 = document.querySelector('#s5d9');
