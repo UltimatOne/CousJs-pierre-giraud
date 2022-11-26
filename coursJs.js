@@ -956,6 +956,7 @@ JavaScript : exemple pratique`);
 s5d7SousTitre.appendChild(contenuS5d7SousTitre);
 const s5d7p1 = document.createElement('p');
 s5d7p1.id = 's5d7p1';
+s5d7p1.style.textAlign = 'justify';
 const contenuS5d7p1 = document.createTextNode(`Regardez l’exemple suivant pour bien comprendre la notion de portée 
 des variables et les subtilités liées à la déclaration des variables dans différents 
 espaces de portée:
@@ -1001,7 +1002,8 @@ document.getElementById('p4').innerHTML =
 'Depuis l'espace global : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
 
 document.getElementById('p5').innerHTML =
-'Depuis l'espace global : <br>a13 = ' + a13 + '<br>b13 = ' + b13;`);
+'Depuis l'espace global : <br>a13 = ' + a13 + '<br>b13 = ' + b13;
+`);
 s5d7p1.appendChild(contenuS5d7p1);
 const s5d7p2 = document.createElement('p');
 s5d7p2.id = 's5d7p2';
@@ -1015,6 +1017,7 @@ const s5d7p6 = document.createElement('p');
 s5d7p6.id = 's5d7p6';
 const s5d7p7 = document.createElement('p');
 s5d7p7.id = 's5d7p7';
+s5d7p7.style.textAlign = 'justify';
 const contenuS5d7p7 = document.createTextNode(`Dans ce script, on commence par déclarer et par initialiser deux variables let x13 et 
 var y13 dans l’espace global de notre script et en utilisant la nouvelle notation avec 
 let et l’ancienne avec var. Pour cette leçon, je vais utiliser à chaque fois les deux 
@@ -1066,7 +1069,9 @@ var y13 = 10;
 //On définit une première fonction qui utilise les variables globales
 function portee1(){
     document.getElementById('s5d7p2').innerHTML =
-    'Depuis portee1() : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
+    `Résultats: 
+    
+    Depuis portee1() : <br>x13 = ` + x13 + '<br>y13 = ' + y13;
 };
 
 //On définit une deuxieme fonction qui définit des variables locales
@@ -1094,18 +1099,109 @@ portee3();
 document.getElementById('s5d7p5').innerHTML =
 'Depuis l\'espace global : <br>x13 = ' + x13 + '<br>y13 = ' + y13;
 
-document.getElementById('s5d7p6').innerHTML =
-'Depuis l\'espace global : <br>a13 = ' + a13 + '<br>b13 = ' + b13;
+/*document.getElementById('s5d7p6').innerHTML =
+'Depuis l\'espace global : <br>a13 = ' + a13 + '<br>b13 = ' + b13;*/ //neutralisé
+
+
+
 
 //Les différences de portée entre les variables var et let en JavaScript
 const s5d8 = document.querySelector('#s5d8');
 
+const s5d8SousTitre = document.createElement('h2');
+s5d8SousTitre.id = 's5d8SousTitre';
 
+const contenuS5d8SousTitre = document.createTextNode(`Les différences de portée entre les variables 
+var et let en JavaScript`);
+s5d8SousTitre.appendChild(contenuS5d8SousTitre);
 
+const s5d8p1 = document.createElement('p');
+s5d8p1.id = 's5d8p1';
+s5d8p1.style.textAlign = 'justify';
+const s5d8p2 = document.createElement('p');
+s5d8p2.id = 's5d8p2';
+const s5d8p3 = document.createElement('p');
+s5d8p3.id = 's5d8p3';
+const s5d8p4 = document.createElement('p');
+s5d8p4.id = 's5d8p4';
+const s5d8p5 = document.createElement('p');
+s5d8p5.id = 's5d8p5';
+const s5d8p6 = document.createElement('p');
+s5d8p6.id = 's5d8p6';
+s5d8p6.style.textAlign = 'justify';
+const contenuS5d8p1 = document.createTextNode(`Dans l’exemple précédent, on n’a pu observer aucune différence de comportement 
+entre une variable déclarée avec la syntaxe let et une variable déclarée avec var 
+en JavaScript.
 
+Il existe pourtant une différence de portée qu’on va pouvoir observer lors de la 
+définition de variables locales. En effet, lorsqu’on utilise la syntaxe let pour définir 
+une variable à l’intérieur d’une fonction en JavaScript, la variable va avoir une portée 
+dite « de bloc » : la variable sera accessible dans le bloc dans lequel elle a été définie 
+et dans les blocs que le bloc contient.
 
+En revanche, en définissant une variable avec le mot clef var dans une fonction, 
+la variable aura une portée élargie puisque cette variable sera alors accessible dans 
+tous les blocs de la fonction. 
 
+Prenons immédiatement un exemple pour bien comprendre cela :
 
+function portee4(){
+    let x14 = 1;
+    var y14 = 2;
+    if(true){
+        let x14 = 5; //Variable différente
+        var y14 = 10; //Même variable qu'au dessus 
+        document.getElementById('p1').innerHTML = 'x14 (dans if) = ' + x14;
+        document.getElementById('p2').innerHTML = 'y14 (dans if) = ' + y14;
+    }
+    document.getElementById('p3').innerHTML = 'x14 (hors if) = ' + x14;
+    document.getElementById('p4').innerHTML = 'y14 (hors if) = ' + y14;
+}
+
+portee4();`);
+s5d8p1.appendChild(contenuS5d8p1);
+
+const contenuS5d8p6 = document.createTextNode(`
+Ici, on crée une fonction portee4() qui contient deux variables let x14 et var y14 ainsi 
+qu’une condition if dont le code va toujours être exécuté car son test est toujours validé 
+(true est toujours évalué… à true).
+
+Dans la condition, on définit à nouveau deux variables let x14 et var y14 avec des 
+valeurs différentes. Ici, la variable let x14 définie va bien représenter une entité 
+différente de celle définie en dehors de la condition. En revanche, ça ne va pas être le 
+cas pour var y14 : dans ce cas-là, on redéfinit la même variable !
+
+Lorsqu’on affiche les valeurs des variables à l’intérieur et en dehors de la boucle, 
+on se rend bien compte que nos deux variables let x14 sont bien différentes et stockent 
+bien des valeurs différentes tandis que notre variable var y14 a juste été redéfinie.
+
+Je le répète encore une fois ici : aujourd’hui, vous devriez toujours utiliser la nouvelle 
+syntaxe de déclaration des variables en JavaScript utilisant le mot clef let. Cependant, 
+je dois vous présenter les variables var car de nombreux sites et développeurs continuent 
+de les utiliser.
+
+Par ailleurs, notez qu’il est considéré comme une mauvaise pratique de déclarer 
+plusieurs variables dans différents espaces en utilisant un même nom car cela peut 
+poser des problèmes évidents de clarté et de lisibilité du code. 
+On essaiera donc tant que possible d’éviter de faire cela.`);
+s5d8p6.appendChild(contenuS5d8p6);
+s5d8.append(s5d8SousTitre, s5d8p1, s5d8p2, s5d8p3, s5d8p4, s5d8p5,s5d8p6);
+
+function portee4(){
+    let x14 = 1;
+    var y14 = 2;
+    if(true){
+        let x14 = 5; //Variable différente
+        var y14 = 10; //Même variable qu'au dessus 
+        document.getElementById('s5d8p2').innerHTML = `Résultats: 
+
+x14 (dans if) = ` + x14;
+        document.getElementById('s5d8p3').innerHTML = 'y14 (dans if) = ' + y14;
+    }
+    document.getElementById('s5d8p4').innerHTML = 'x14 (hors if) = ' + x14;
+    document.getElementById('s5d8p5').innerHTML = 'y14 (hors if) = ' + y14;
+}
+portee4();
 
 
 
@@ -1116,4 +1212,4 @@ const s5d8 = document.querySelector('#s5d8');
 
 
 //Les valeurs de retour des fonctions
-const s5d9 = document.querySelector('#s5d9');
+//const s5d9 = document.querySelector('#s5d9');
