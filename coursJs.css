@@ -5,6 +5,9 @@
 #corps {
     background-color: #ff6a6588;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #spd2 {
@@ -74,4 +77,10 @@ tfoot {
 }
 p, h1, h2, span{
     white-space:pre
+}
+
+
+#s5d6, #s5d7 ,#s5d8{
+    margin-left: 12.5%;
+    width: 75%;
 }

@@ -1696,3 +1696,64 @@ para1.addEventListener('click', function(){
 para2.addEventListener('click', function(){
     alert('Clic sur p id=p2');
 });
+
+
+//Les fonctions récursives
+const s5d16 = document.querySelector('#s5d16');
+
+//création des éléments à injecter dans l'emplacement
+const s5d16SousTitre1 = document.createElement('h3');
+s5d16SousTitre1.id = 's5d16SousTitre2';
+const s5d16p1 = document.createElement('p');
+s5d16p1.id = 's5d16p1';
+s5d16p1.style.textAlign = 'justify';
+const s5d16p2 = document.createElement('p');
+s5d16p2.id = 's5d16p2';
+const s5d16p3 = document.createElement('p');
+s5d16p3.id = 's5d16p3';
+const s5d16p4 = document.createElement('p');
+s5d16p4.id = 's5d16p4';
+s5d16p4.style.textAlign = 'justify';
+
+//Injection des éléments dans l'emplacement
+s5d16.append(s5d16SousTitre1, s5d16p1, s5d16p2, s5d16p3, s5d16p4);
+
+//Création du contenu à injecter dans les éléments
+const contenuS5d16SousTitre1 = document.createTextNode(`Les fonctions récursives`);
+
+const contenuS5d16p1 = document.createTextNode(`Pour clore cette partie, j’aimerais également vous présenter des fonctions qui possèdent une structure particulière et qu’on appelle fonctions récursives.
+
+Une fonction récursive est une fonction qui va s’appeler elle-même au sein de son code.
+
+Tout comme pour les boucles, les fonctions récursives vont nous permettre d’exécuter une action en boucle et jusqu’à ce qu’une certaine condition de sortie soit vérifiée.
+
+function decompte(t){
+    if ( t > -1 ) {
+        document.getElementById('p1').innerHTML += t + '<br>';
+        return decompte( t - 1 );
+    } else {
+        return t;
+    }
+}
+decompte(5);
+
+                                                                                                                                            Résultat:`);
+
+const contenuS5d16p3 = document.createTextNode(`Ici, notre fonction decompte() est une fonction récursive : elle va s’appeler elle-même dans son code. La fonction prend ici un nombre en argument. Si ce nombre est strictement 
+positif, il est affiché dans le paragraphe p id='p1' et la fonction est de nouveau exécutée en enlevant 1 à la valeur passée précédemment et cela jusqu’à arriver à -1.`);
+
+
+
+//injection des contenus dans leurs éléments respectif
+s5d16SousTitre1.appendChild(contenuS5d16SousTitre1);
+s5d16p1.appendChild(contenuS5d16p1);
+function decompte(t){
+    if ( t > -1 ) {
+        document.getElementById('s5d16p2').innerHTML += t + '<br>';
+        return decompte( t - 1 );
+    } else {
+        return t;
+    }
+}
+decompte(5);
+s5d16p3.appendChild(contenuS5d16p3);
