@@ -1757,3 +1757,29 @@ function decompte(t){
 }
 decompte(5);
 s5d16p3.appendChild(contenuS5d16p3);
+
+
+
+//L'orienté objet en JavaScript
+let s6d1 = document.querySelector('#s6d1');
+
+let s6d1Titre = document.createElement('h1');
+let s6d1SousTitre = document.createElement('h3');
+let s6d1p1 = document.createElement('p');
+
+s6d1.append(s6d1Titre, s6d1SousTitre, s6d1p1);
+
+contenuS6d1Titre = document.createTextNode(`L'orienté objet en JavaScript`);
+contenuS6d1SousTitre = document.createTextNode(`Introduction à l’orienté objet en JavaScript`);
+contenuS6d1p1 = document.createTextNode(`Dans cette nouvelle partie, nous allons nous plonger dans ce qui fait toute la puissance du JavaScript : 
+
+les objets et la programmation orientée objet. 
+
+Cette première leçon n’est pas la plus simple à digérer car elle introduit de nombreux nouveaux concepts et pose des bases très théoriques.
+
+Pas d’inquiétude donc si certaines notions restent floues et abstraites : nous allons redéfinir et illustrer les concepts de cette leçon dans tout le reste de cette partie. 
+
+Il me semblait toutefois intéressant de commencer par poser certaines bases pour que vous les ayez en tête et que vous compreniez mieux ce qu’on va faire par la suite.`);
+s6d1Titre.appendChild(contenuS6d1Titre);
+s6d1SousTitre.appendChild(contenuS6d1SousTitre);
+s6d1p1.appendChild(contenuS6d1p1);
