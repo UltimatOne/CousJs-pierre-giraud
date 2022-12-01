@@ -21,6 +21,10 @@ const jeanjacques = new Utilisateur(['Jean-Jacques', 'Goddet'], 29, 'jj.goddet@i
 //Accès (aux valeurs des propriétés en les affichants avec la méthode bonjour() qui envoie une fenetre d'aletre sur la page web
 jeanjacques.bonjour()
 
+//On à le droit de rever... l'age n'est pas bon, corrrection
+jeanjacques.age = 43;
+
+
 /*Affichage des valeurs des propriétés de l'objet créé dans des paragraphes du fichier HTML en manipulation de DOM*/
 
 //création d'une constante ciblant la section avec l'id s1
