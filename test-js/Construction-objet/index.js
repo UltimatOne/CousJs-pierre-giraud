@@ -1,4 +1,3 @@
-
 /**Utilisateur est une fonction constructeur
  * @param {nom} n proriété nom
  * @param {age} a proriété age
