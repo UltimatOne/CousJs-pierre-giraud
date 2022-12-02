@@ -43,7 +43,7 @@ s1p3.id = 's1p3';
 //injection des paragraphes dans la section
 section1.append(s1p1,s1p2,s1p3);
 
-let geo = new Parallelepipede(5, 4, 3);
+let geo = new Parallelepipede(10, 6, 5);
 geo.surface();
 geo.aire();
 geo.taille();
