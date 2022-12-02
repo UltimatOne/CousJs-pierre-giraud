@@ -31,6 +31,7 @@ class Ligne {
 let geo1 = new Ligne('geo1', 10);
 let geo2 = new Ligne('geo2', 5);
 
+
 class Rectangle extends Ligne {
     constructor(nom, longueur, largeur){
     super(nom, longueur); //'super' apelle le constructeur parent (Ligne)
