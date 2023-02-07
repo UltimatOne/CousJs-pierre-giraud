@@ -1,5 +1,7 @@
 import './App.css';
+import Resume from './composants/Resume';
 import Symboles from './composants/Symboles';
+import Utilisation from './composants/Utilisation';
 import WellKnowSymboles from './composants/WellKnowSymboles';
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
     <div className="App">
       <Symboles />
       <WellKnowSymboles/>
+      <Utilisation/>
+      <Resume/>
     </div>
   );
 }

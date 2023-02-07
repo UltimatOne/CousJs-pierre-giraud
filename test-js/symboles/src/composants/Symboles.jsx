@@ -24,10 +24,10 @@ const Symboles = () => {
         const symbole2 = Symbol('symbole2');<br/>
         const x42 = Symbol(42);<br/>
         <br/>
-        \//créé et renvoie un nouveau symbole symbole3<br/>
+        //Crée et renvoie un nouveau symbole symbole3<br/>
         const symbole3 = Symbol.for('symbole3');<br/> 
         <br/>
-        \//On convertit le symbole en chaine pour l'alert -<br/> 
+        //On convertit le symbole en chaine pour l'alert -<br/> 
         alert(symbole3.toString())<br/>
         <br/>
         const symboleGlobal = Symbol.for('symbole3');<br/> 
