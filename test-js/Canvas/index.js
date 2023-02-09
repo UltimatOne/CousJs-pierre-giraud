@@ -13,6 +13,11 @@ let canvas12 = document.getElementById('c12');
 let canvas13 = document.getElementById('c13');
 let canvas14 = document.getElementById('c14');
 let canvas15 = document.getElementById('c15');
+let canvas16 = document.getElementById('c16');
+let canvas17 = document.getElementById('c17');
+let canvas18 = document.getElementById('c18');
+let canvas19 = document.getElementById('c19');
+let canvas20 = document.getElementById('c20');
 let ctx1 = canvas1.getContext('2d');
 let ctx2 = canvas2.getContext('2d');
 let ctx3 = canvas3.getContext('2d');
@@ -28,6 +33,11 @@ let ctx12 = canvas12.getContext('2d');
 let ctx13 = canvas13.getContext('2d');
 let ctx14 = canvas14.getContext('2d');
 let ctx15 = canvas15.getContext('2d');
+let ctx16 = canvas16.getContext('2d');
+let ctx17 = canvas17.getContext('2d');
+let ctx18 = canvas18.getContext('2d');
+let ctx19 = canvas19.getContext('2d');
+let ctx20 = canvas20.getContext('2d');
 
 ctx1.strokeStyle = '#4444CC'; //nuance de bleu
 ctx1.strokeRect(50, 12.5, 200, 125);
@@ -200,3 +210,70 @@ let image = document.getElementById('sunset');
 image.addEventListener('load', function(){
     ctx15.drawImage(image, 75, 25, 150, 100);
 }, false);
+
+//Translation
+ctx16.fillStyle = '#48A'; //Bleu
+ctx16.fillRect(25, 25, 75, 75);
+
+//On déplace le point d'origine du canevas
+ctx16.translate(175, 25);
+
+ctx16.fillStyle = 'RGB(64,192,128)'; //Vert
+ctx16.fillRect(25, 25, 75, 75);
+
+//Rotation
+ctx17.fillStyle = '#48A';
+ctx17.fillRect(0, 0, 300, 50);
+
+//Première rotation de 20deg
+ctx17.rotate(Math.PI/9);
+ctx17.fillStyle = 'RGBa(64,192,128,0.6)'; //Vert
+ctx17.fillRect(0, 0, 300, 50);
+
+//Deuxième rotation de 20deg. Les rotations se cumulent
+ctx17.rotate(Math.PI/9);
+ctx17.fillStyle = 'RGBa(192,64,192,0.6)'; //Rose
+ctx17.fillRect(0, 0, 300, 50);
+
+//translation et rotation + sauvegarde et resto
+//On déplace le point initial du canevas
+ctx18.translate(150, 75);
+
+ctx18.save();
+            
+ctx18.fillStyle = '#48B'; //Bleu
+ctx18.fillRect(0, 0, 50, 50);
+
+ctx18.rotate(Math.PI/2);
+ctx18.fillStyle = '#4B8'; //Vert
+ctx18.fillRect(0, 0, 50, 50);
+
+ctx18.rotate(Math.PI/2);
+ctx18.fillStyle = '#C00'; //Rouge
+ctx18.fillRect(0, 0, 50, 50);
+
+ctx18.restore();
+
+ctx18.rotate(Math.PI/2);
+ctx18.fillStyle = '#DD2'; //Jaune
+ctx18.fillRect(0, 0, 50, 50);
+
+//Transformation complete
+ctx19.transform(1, 0, 1, 1, 25, 50);
+
+ctx19.fillStyle = '#48B'; //Bleu
+ctx19.fillRect(0, 0, 75, 50);
+
+ctx19.fillStyle = '#4B8'; //Vert
+ctx19.fillRect(125, 0, 75, 50);
+
+//setTransform
+ctx20.transform(1, 0, 1, 1, 100, 50);
+
+ctx20.fillStyle = '#48B'; //Bleu
+ctx20.fillRect(0, 0, 75, 50);
+
+ctx20.setTransform(1, 0, -1, 1, 100, 50);
+
+ctx20.fillStyle = '#4B8'; //Vert
+ctx20.fillRect(0, 0, 75, 50);
