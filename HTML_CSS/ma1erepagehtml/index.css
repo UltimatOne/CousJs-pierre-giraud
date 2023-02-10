@@ -1,26 +1,25 @@
-.smile{
-    width: 80%;
+.smile {
+  width: 80%;
 }
-.lateralbar{
-    position: fixed;
-    width: 200px;
+.lateralbar {
+  position: fixed;
+  width: 200px;
 }
-.container{
-    display: flex;
-    margin-left: 200px;
+.container {
+  display: flex;
+  margin-left: 200px;
 }
-h1{
-    color: red;
+h1 {
+  color: red;
 }
-/* first-of-type applique le style seulement à la 1ere balise (ici h2) rencontrée dans chaque éléments parents */
-h2:first-of-type{
-    font-size: 16px;
-    color: orange;
+/* first-of-type applique le style seulement au 1er element (ici h2) rencontrée dans chaque éléments parents */
+h2:first-of-type {
+  color: orange;
 }
-p:first-of-type{
-    font-size: 16px;
-    color: blue;
+p:first-of-type {
+  font-size: 16px;
+  color: blue;
 }
-.smiley{
-    width: 2%;
+.smiley {
+  width: 2%;
 }
