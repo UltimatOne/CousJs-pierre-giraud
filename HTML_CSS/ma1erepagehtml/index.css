@@ -1,3 +1,11 @@
+.container{
+    display: flex;
+    margin-left: 200px;
+}
+.lateralbar{
+    position: fixed;
+    width: 200px;
+}
 h1{
     color: red;
 }
