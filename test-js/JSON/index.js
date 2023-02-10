@@ -7,6 +7,7 @@ let utilisateur = {
     complement: "11 résidence l'Armorique",
     cp: 59450,
     ville: "Sin Le Noble",
+    pays: "France"
   },
   mails: ["jj.goddet@icloud.com", "jj.goddet@free.fr"],
 };
