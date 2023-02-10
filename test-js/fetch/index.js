@@ -14,7 +14,7 @@ let promise = fetch(`https://dummyjson.com/products`, {
       "Content-Type": "text/plain;charset=UTF-8" //pour un corps de type chaine
     },
     body: undefined, //ou string, FormData, Blob, BufferSource, ou URLSearchParams
-    referrer: "about:client", //ou "" (pas de réferanr) ou une url de l'origine
+    referrer: "about:client", //ou "" (pas de référant) ou une url de l'origine
     referrerPolicy: "no-referrer-when-downgrade", //ou no-referrer, origin, same-origin...
     mode: "cors", //ou same-origin, no-cors
     credentials: "same-origin", //ou omit, include
