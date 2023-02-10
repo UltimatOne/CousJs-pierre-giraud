@@ -1,0 +1,15 @@
+h1{
+    color: red;
+}
+/* first-of-type applique le style seulement à la 1ere balise (ici h2) rencontrée */
+h2:first-of-type{
+    font-size: 16px;
+    color: orange;
+}
+p:first-of-type{
+    font-size: 16px;
+    color: blue;
+}
+.smiley{
+    width: 2%;
+}

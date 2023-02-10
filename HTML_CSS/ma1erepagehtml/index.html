@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Ma 1ere page HTML</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <ul>
+        <li><a href="#listes">Aller aux listes</a></li>
+        <li><a href="#liens">Aller aux liens</a></li>
+    </ul>
+    <!-- Titre H1, pour bonne pratique on l'utilise qu'une fois par page ou par section -->
+    <h1 id="titre">Titre de principal</h1>
+
+    <!-- Titre secondaire H2, on peut l'utiliser autant de fois que l'on veut -->
+    <h2>Titre de niveau 2</h2>
+    <h2>Second titre de niveau 2</h2>
+
+    <!-- Il existe aussi H3, H4, H5, et H6, avec des pages bien construites on dépasse rarement H3 -->
+    <h3>Titre de niveau 3</h3>
+
+    <!-- Un paragraphe -->
+    <p>Mon premier paragraphe écrit en HTML</p>
+
+    <!-- Chaque élément p va créer automatiquement un retour à la ligne comme avec les titres -->
+    <p>Un deuxieme paragraphe</p>
+
+    <!-- L'élément br (break) permet de crer un retour à la ligne -->
+    <p>
+      Un<br />paragraphe<br />avec<br />des<br />éléments<br />br (pour break)
+      permettant des retours à la ligne.
+    </p>
+
+    <!-- l'élément hr qui sert a créer un retour à la ligne avec une séparation pour indiqué le changement de thématique -->
+    <p>
+      HTML : le HTML est un langage utilisé pour marquer sémantiquement un
+      contenu.
+    </p>
+    <hr />
+    <p>
+      CSS : le CSS sert à mettre en forme des éléments en leur appliquant des
+      styles.
+    </p>
+
+    <!-- L'élément pre permet de conserver la mise en forme écrite dans le HTML avec les espaces -->
+    <pre>
+      L'élément pre permet de conserver la mise en forme écrite dans le HTML avec les espaces:
+
+      HTML : le HTML est un langage utilisé pour marquer sémantiquement un
+      contenu.
+
+      CSS : le CSS sert à mettre en forme des éléments en leur appliquant des
+      styles.
+
+      L'utilisation de cet éléments est rare, voir inexistant car on préférera utiliser le css pour la mise en forme
+    </pre>
+
+    <!-- Liste ordonée et non ordonée -->
+    <h3 id="listes">Liste ordonée et non ordonée</h3>
+    <p>Liste non ordonée</p>
+    <ul>
+      <li>Elément 1 de la liste</li>
+      <li>Elément 2 de la liste</li>
+      <li>Elément 3 de la liste</li>
+    </ul>
+    <p>Liste ordonée</p>
+    <ol>
+      <li>Elément 1 de la liste</li>
+      <li>Elément 2 de la liste</li>
+      <li>Elément 3 de la liste</li>
+    </ol>
+    <p>Liste ordonée avec attribut de type chiffres romain en majuscule</p>
+    <p>
+      On préférera utiliser le css aujourd'hui pour changer le type des puces
+    </p>
+    <ol type="I">
+      <li>Elément 1 de la liste</li>
+      <li>Elément 2 de la liste</li>
+      <li>Elément 3 de la liste</li>
+    </ol>
+    <p>Liste ordonée avec attribut de type lettres en majuscule</p>
+    <ol type="A">
+      <li>Elément 1 de la liste</li>
+      <li>Elément 2 de la liste</li>
+      <li>Elément 3 de la liste</li>
+    </ol>
+    <p>Liste ordonée avec attribut reversed pour décroissant</p>
+    <ol reversed>
+      <li>Elément 1 de la liste</li>
+      <li>Elément 2 de la liste</li>
+      <li>Elément 3 de la liste</li>
+    </ol>
+    <p>
+      Liste ordonée avec attribut reversed pour décroissant et l'attribut start
+      initilisé à 10 pour que le décompte commence à 10
+    </p>
+    <ol reversed start="10">
+      <li>Elément 1 de la liste</li>
+      <li>Elément 2 de la liste</li>
+      <li>Elément 3 de la liste</li>
+    </ol>
+    <p>Liste de définition</p>
+    <dl>
+      <dt>HTML</dt>
+      <dd>HTML signifie HyperText Markup Language.</dd>
+    </dl>
+    <p>Listes, imbrication. Dans l'exemple nous imbriquons une liste non-ordonnée dans une liste ordonnée</p>
+    <ol>
+      <li>Introduction</li>
+      <li>
+        Partie I
+        <ul>
+          <li>Définitions</li>
+          <li>Auteurs</li>
+          <li>Exemples</li>
+        </ul>
+      </li>
+      <li>Partie II</li>
+      <li>Conclusion</li>
+    </ol>
+
+    <!-- les liens -->
+    <h3 id="liens">Les liens</h3>
+    <p>Pour créer des liens en HTML, on utilise l'élément a et son attribut href.</p>
+    <p>Ex : lien vers <a href="https://www.google.fr" alt="Lien vers Google">Google</a> notre meilleur ami ;)</p>
+
+    <p>Mettre l'id d'un élément dans href permet de naviguer dans une longue page facilement:</p>
+    <ul>
+        <li><a href="#titre">Remonter au titre</a></li>
+        <li><a href="#listes">Remonter aux listes</a></li>
+    </ul>
+
+    <!-- mailto: suivi du mail permet d'ouvrir le gestionnaire de mail de l'utilisateur -->
+    <p>M'envoyer un <a href="mailto:jj.goddet@icloud.com">mail</a></p>
+
+    <!-- l'attribut download permet de lancer le téléchargement du smiley lors du clic -->
+    <!-- l'élément img permet d'insérer l'image du smiley à la place du texte -->
+    <p>Mon <a href="smile.png" download="smiley"><img src="smile.png" alt="smiley content" class="smiley"></a> à télécharger</p>
+
+    <!-- Une image d'un smiley content -->
+    <img src="smile.png" alt="Un émoji content qui leve 2 doigts" />
+  </body>
+</html>
