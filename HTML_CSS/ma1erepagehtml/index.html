@@ -9,13 +9,17 @@
   </head>
   <body>
     <div class="lateralbar">
-        <img src="smile.png" class="smile" alt="Un émoji content qui leve 2 doigts" />
-        <ul>
-          <li><a href="#titre">Aller au titre</a></li>
-          <li><a href="#listes">Aller aux listes</a></li>
-          <li><a href="#liens">Aller aux liens</a></li>
-        </ul>
-      </div>
+      <img
+        src="smile.png"
+        class="smile"
+        alt="Un émoji content qui leve 2 doigts"
+      />
+      <ul>
+        <li><a href="#titre">Aller au titre</a></li>
+        <li><a href="#listes">Aller aux listes</a></li>
+        <li><a href="#liens">Aller aux liens</a></li>
+      </ul>
+    </div>
     <div class="container">
       <div>
         <div>
@@ -63,10 +67,11 @@
       styles.
 
       L'utilisation de cet éléments est rare, voir inexistant car on préférera utiliser le css pour la mise en forme
-        </pre>
+        </pre
+          >
         </div>
         <div>
-          <!-- Liste ordonée et non ordonée -->
+          <!-- Liste ordonée ol et non ordonée ul -->
           <h2 id="listes">Liste ordonée et non ordonée</h2>
           <p>Liste non ordonée</p>
           <ul>
@@ -171,10 +176,55 @@
           </p>
         </div>
         <div>
+          <h2>Les sélecteurs CSS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sélecteur CSS</th>
+              <th>Signification</th>
+            </tr>
+          </thead>
+          <tbody class="selecteurs">
+            <tr>
+              <td><code>*</code></td>
+              <td>Sélectionne tous les éléments</td>
+            </tr>
+            <tr>
+              <td><code>E, F</code></td>
+              <td>Sélectionne tous les éléments de type E et de type F</td>
+            </tr>
+            <tr>
+              <td><code>E F</code></td>
+              <td>Sélectionne tous les éléments F à l’intérieur des éléments E</td>
+            </tr>
+            <tr>
+              <td><code>E &gt; F</code></td>
+              <td>Sélectionne les éléments F enfants directs des éléments E</td>
+            </tr>
+            <tr>
+              <td><code>E + F</code></td>
+              <td>
+                Sélectionne tout élément F placé directement après un élément E
+              </td>
+            </tr>
+            <tr>
+              <td><code>E~F</code></td>
+              <td>
+                Sélectionne tout élément F placé après un élément E dans la page
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <div>
           <!-- Une image d'un smiley content -->
           <img src="smile.png" alt="Un émoji content qui leve 2 doigts" />
         </div>
       </div>
     </div>
+    <!-- Ce lien est mise en forme en css en sélectionnant que les liens dans l'élément body avec les selecteurs en le combinants "body> a" -->
+    <!--Note : Utiliser href="#" permet de créer un lien HTML valide mais qui ne mène nulle part (qui est "vide"), ce qui est parfois utile-->
+    <a href="#">un lien positionné directement dans l'élément body</a><br>
+    <a href="#">On peut constater que seule ces liens ont un fond</a>
   </body>
 </html>

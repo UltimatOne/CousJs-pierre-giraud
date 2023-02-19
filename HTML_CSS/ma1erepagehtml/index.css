@@ -1,3 +1,16 @@
+/*Ici on applique le style a body en pointant directement le sélecteur HTML body
+si un sélecteur est présent plusieurs fois dans la page, le style s'appliquera à tous
+* couleur de fond grise de la page en ciblant l'élément body */
+body{
+  background-color: rgb(211, 211, 211);
+}
+/* Ces selecteurs permettent de mettre en forme que les liens dans l'élément body */
+body> a{
+  background-color: bisque;
+}
+/* width permet de régler la largeur d'un élément et heigth la hauteur
+*si on indique juste la largeur, la hauteur est calculée automatiquement 
+*et proportionnellement */
 .smile {
   width: 80%;
 }
@@ -14,12 +27,28 @@ h1 {
 }
 /* first-of-type applique le style seulement au 1er element (ici h2) rencontrée dans chaque éléments parents */
 h2:first-of-type {
-  color: orange;
+  color: rgb(0, 255, 242);
 }
 p:first-of-type {
+  color: blue;
+  border: 2px solid red;
+  padding: 5px;
   font-size: 16px;
+}
+/* hover permet de changer le style lorsque la souris survol l'élément choisi ici l'élément p */
+p:hover{
+  color: rgb(42, 165, 93);
+}
+/* exemple hover sur un élément H1 */
+h1:hover{
   color: blue;
 }
 .smiley {
   width: 2%;
+}
+tr, th{
+  border: 2px solid black;
+}
+td{
+  border: 1px solid black;
 }
