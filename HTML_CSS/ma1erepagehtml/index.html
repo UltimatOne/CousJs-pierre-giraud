@@ -15,9 +15,13 @@
         alt="Un émoji content qui leve 2 doigts"
       />
       <ul>
-        <li><a href="#titre">Aller au titre</a></li>
-        <li><a href="#listes">Aller aux listes</a></li>
-        <li><a href="#liens">Aller aux liens</a></li>
+        <li><a href="#titre">Titre</a></li>
+        <li><a href="#listes">Les listes</a></li>
+        <li><a href="#liens">Les liens</a></li>
+        <li><a href="#entites">Les entités HTML</a></li>
+        <li><a href="#valider">Valider son code</a></li>
+        <li><a href="#selecteurs">Les sélecteurs</a></li>
+        <li><a href="#enfants">Appliquer styles aux enfants</a></li>
       </ul>
     </div>
     <div class="container">
@@ -150,7 +154,7 @@
           </p>
           <p>
             Ex : lien vers <a href="https://www.google.fr">Google</a> notre
-            meilleur ami ;)
+            meilleur ami ;) ou celui vers <a href="https://chat.openai.com/chat" alt="Lien vers chatGPT">chatGPT</a> notre nouveau super copain
           </p>
 
           <p>
@@ -176,6 +180,84 @@
           </p>
         </div>
         <div>
+          <!-- Une image d'un smiley content -->
+          <img src="smile.png" alt="Un émoji content qui leve 2 doigts" />
+        </div>
+        <div id="entites">
+          <h2>Les entités HTML</h2>
+          <p>
+            Les entités permettent d'écrire des caractères réservés en HTML
+            comme &lt (chevron ouvrant), &gt (chevron fermant) ou encore &amp
+            (esperluette)
+          </p>
+          <p>
+            Voici quelques-unes des entités les plus courantes et leur
+            signification :
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <th>Nom de l’entité</th>
+                <th>Résultat visuel</th>
+              </tr>
+              <tr>
+                <td>&amp;lt;</td>
+                <td>&lt; (chevron ouvrant)</td>
+              </tr>
+              <tr>
+                <td>&amp;gt;</td>
+                <td>&gt; (chevron fermant)</td>
+              </tr>
+              <tr>
+                <td>&amp;amp;</td>
+                <td>&amp; (esperluette)</td>
+              </tr>
+              <tr>
+                <td>&amp;nbsp;</td>
+                <td>&nbsp; (espace insécable)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="valider">
+          <h2>Tester la validité de son code</h2>
+          <p>
+            Il faut toujours s'efforcer d’écrire un code valide. Cela évitera
+            des bugs potentiels et les sites seront au final mieux référencés
+            sur les moteurs de recherche.
+          </p>
+          <p>
+            Pour vérifier la validité d’un code HTML ou CSS, le w3c (World Wide
+            Web Consortium), c’est-à-dire l’organisme qui gère l’évolution des
+            langages lus par les navigateurs comme le HTML et le CSS entre
+            autres, a mis à disposition des validateurs de code qui sont
+            gratuits.
+          </p>
+          <p>
+            On peut trouver les validateurs HTML et CSS aux adresses suivantes :
+          </p>
+          <ul>
+            <li>
+              HTML :
+              <a
+                href="http://validator.w3.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ici</a
+              >
+            </li>
+            <li>
+              CSS :
+              <a
+                href="http://jigsaw.w3.org/css-validator/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ici</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="selecteurs">
           <h2>Les sélecteurs CSS</h2>
           <table>
             <thead>
@@ -222,47 +304,64 @@
             </tbody>
           </table>
         </div>
-        <div>
-          <h2>Les entités HTML</h2>
-          <p>Les entités permettent d'écrire des caractères réservés en HTML comme &lt (chevron ouvrant), &gt (chevron fermant) ou encore &amp (esperluette)</p>
-          <p>
-            Voici quelques-unes des entités les plus courantes et leur
-            signification :
-          </p>
-          <table>
-            <tbody>
-              <tr>
-                <th>Nom de l’entité</th>
-                <th>Résultat visuel</th>
-              </tr>
-              <tr>
-                <td>&amp;lt;</td>
-                <td>&lt; (chevron ouvrant)</td>
-              </tr>
-              <tr>
-                <td>&amp;gt;</td>
-                <td>&gt; (chevron fermant)</td>
-              </tr>
-              <tr>
-                <td>&amp;amp;</td>
-                <td>&amp; (esperluette)</td>
-              </tr>
-              <tr>
-                <td>&amp;nbsp;</td>
-                <td>&nbsp; (espace insécable)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div>
-          <!-- Une image d'un smiley content -->
-          <img src="smile.png" alt="Un émoji content qui leve 2 doigts" />
-        </div>
       </div>
     </div>
+    <h2  id="enfants" class="enfants">
+      Appliquer des styles aux enfants directs d’un autre élément
+    </h2>
+    <p class="enfants">
+      Nous allons également pouvoir cibler uniquement un élément ou un groupe
+      d’éléments enfants directs d’un autre élément en utilisant le signe de
+      supériorité stricte ou le caractère chevron fermant >.
+    </p>
+    <p class="enfants">
+      Un élément est un enfant direct ou « descendant direct » d’un autre
+      élément s’il est directement contenu dans celui-ci.
+    </p>
+    <p class="enfants">
+      Par exemple, nous allons pouvoir appliquer des styles à tous les liens
+      (éléments a) qui sont des enfants directs de l’élément body et uniquement
+      à ceux-ci :
+    </p>
+    <pre class="enfants">
+      body > a {
+        background-color: yellow;
+      }
+    </pre>
     <!-- Ce lien est mise en forme en css en sélectionnant que les liens dans l'élément body avec les selecteurs en le combinants "body> a" -->
     <!--Note : Utiliser href="#" permet de créer un lien HTML valide mais qui ne mène nulle part (qui est "vide"), ce qui est parfois utile-->
-    <a href="#">un lien positionné directement dans l'élément body</a><br />
-    <a href="#">On peut constater que seule ces liens ont un fond</a>
+    <a href="#" class="enfants"
+      >un lien positionné directement dans l'élément body</a
+    ><br />
+    <a href="#" class="enfants"
+      >On peut constater que seule ces liens ont un fond</a
+    >
+    <div class="enfants">
+      <h2>
+        Sélectionner l’élément suivant directement un autre élément en CSS
+      </h2>
+      <p>
+        Le CSS va nous permettre de cibler encore plus précisément un élément en
+        ciblant l’élément suivant directement un autre élément grâce au
+        caractère +.
+      </p>
+      <p>
+        Par exemple, on va pouvoir cibler les éléments a (liens) suivant
+        directement un élément p :
+      </p>
+      <pre>
+      p + a {
+        background-color: red;
+      }
+      </pre>
+      <a href="#">Un lien</a>
+      <p>Un premier paragraphe</p>
+      <a href="#">Un autre lien</a>
+      <p>Un autre paragraphe avec un <a href="#">lien</a></p>
+      <ul>
+        <li><a href="#">Elément de liste (lien) 1</a></li>
+        <li>Elément de liste 2</li>
+      </ul>
+    </div>
   </body>
 </html>

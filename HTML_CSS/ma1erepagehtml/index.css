@@ -1,11 +1,11 @@
 /*Ici on applique le style a body en pointant directement le sélecteur HTML body
 si un sélecteur est présent plusieurs fois dans la page, le style s'appliquera à tous
 * couleur de fond grise de la page en ciblant l'élément body */
-body{
+body {
   background-color: rgb(211, 211, 211);
 }
-/* Ces selecteurs permettent de mettre en forme que les liens dans l'élément body */
-body> a{
+/* Ces selecteurs permettent de mettre en forme que les liens directement dans l'élément body. Ici on leur applique une couleur de fond bisque */
+body > a {
   background-color: bisque;
 }
 /* width permet de régler la largeur d'un élément et heigth la hauteur
@@ -16,11 +16,15 @@ body> a{
 }
 .lateralbar {
   position: fixed;
-  width: 200px;
+  width: 15%;
+  height: 99vh;
+}
+.lateralbar li{
+  margin-top: 5%;
 }
 .container {
   display: flex;
-  margin-left: 200px;
+  margin-left: 16%;
 }
 h1 {
   color: red;
@@ -36,20 +40,21 @@ p:first-of-type {
   font-size: 16px;
 }
 /* hover permet de changer le style lorsque la souris survol l'élément choisi ici l'élément p */
-p:hover{
+p:hover {
   color: rgb(42, 165, 93);
 }
 /* exemple hover sur un élément H1 */
-h1:hover{
+h1:hover {
   color: blue;
 }
 .smiley {
   width: 2%;
 }
-tr, th{
+tr,
+th {
   border: 2px solid black;
 }
-td{
+td {
   border: 1px solid black;
 }
 table {
@@ -63,4 +68,12 @@ tbody {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
+}
+/* Alignement des éléments portant la classe "enfants" avec les autres éléments de la page */
+.enfants {
+  margin-left: 16%;
+}
+/* On cible le 1er lien se trouvant après un élément p dans  */
+p + a{
+  background-color: red;
 }
