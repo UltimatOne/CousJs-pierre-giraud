@@ -177,45 +177,82 @@
         </div>
         <div>
           <h2>Les sélecteurs CSS</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Sélecteur CSS</th>
-              <th>Signification</th>
-            </tr>
-          </thead>
-          <tbody class="selecteurs">
-            <tr>
-              <td><code>*</code></td>
-              <td>Sélectionne tous les éléments</td>
-            </tr>
-            <tr>
-              <td><code>E, F</code></td>
-              <td>Sélectionne tous les éléments de type E et de type F</td>
-            </tr>
-            <tr>
-              <td><code>E F</code></td>
-              <td>Sélectionne tous les éléments F à l’intérieur des éléments E</td>
-            </tr>
-            <tr>
-              <td><code>E &gt; F</code></td>
-              <td>Sélectionne les éléments F enfants directs des éléments E</td>
-            </tr>
-            <tr>
-              <td><code>E + F</code></td>
-              <td>
-                Sélectionne tout élément F placé directement après un élément E
-              </td>
-            </tr>
-            <tr>
-              <td><code>E~F</code></td>
-              <td>
-                Sélectionne tout élément F placé après un élément E dans la page
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Sélecteur CSS</th>
+                <th>Signification</th>
+              </tr>
+            </thead>
+            <tbody class="selecteurs">
+              <tr>
+                <td><code>*</code></td>
+                <td>Sélectionne tous les éléments</td>
+              </tr>
+              <tr>
+                <td><code>E, F</code></td>
+                <td>Sélectionne tous les éléments de type E et de type F</td>
+              </tr>
+              <tr>
+                <td><code>E F</code></td>
+                <td>
+                  Sélectionne tous les éléments F à l’intérieur des éléments E
+                </td>
+              </tr>
+              <tr>
+                <td><code>E &gt; F</code></td>
+                <td>
+                  Sélectionne les éléments F enfants directs des éléments E
+                </td>
+              </tr>
+              <tr>
+                <td><code>E + F</code></td>
+                <td>
+                  Sélectionne tout élément F placé directement après un élément
+                  E
+                </td>
+              </tr>
+              <tr>
+                <td><code>E~F</code></td>
+                <td>
+                  Sélectionne tout élément F placé après un élément E dans la
+                  page
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h2>Les entités HTML</h2>
+          <p>
+            Voici quelques-unes des entités les plus courantes et leur
+            signification :
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <th>Nom de l’entité</th>
+                <th>Résultat visuel</th>
+              </tr>
+              <tr>
+                <td>&amp;lt;</td>
+                <td>&lt; (chevron ouvrant)</td>
+              </tr>
+              <tr>
+                <td>&amp;gt;</td>
+                <td>&gt; (chevron fermant)</td>
+              </tr>
+              <tr>
+                <td>&amp;amp;</td>
+                <td>&amp; (esperluette)</td>
+              </tr>
+              <tr>
+                <td>&amp;nbsp;</td>
+                <td>&nbsp; (espace insécable)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div>
           <!-- Une image d'un smiley content -->
           <img src="smile.png" alt="Un émoji content qui leve 2 doigts" />
@@ -224,7 +261,7 @@
     </div>
     <!-- Ce lien est mise en forme en css en sélectionnant que les liens dans l'élément body avec les selecteurs en le combinants "body> a" -->
     <!--Note : Utiliser href="#" permet de créer un lien HTML valide mais qui ne mène nulle part (qui est "vide"), ce qui est parfois utile-->
-    <a href="#">un lien positionné directement dans l'élément body</a><br>
+    <a href="#">un lien positionné directement dans l'élément body</a><br />
     <a href="#">On peut constater que seule ces liens ont un fond</a>
   </body>
 </html>
