@@ -2,7 +2,9 @@
 si un sélecteur est présent plusieurs fois dans la page, le style s'appliquera à tous
 * couleur de fond grise de la page en ciblant l'élément body */
 body {
+  font-family: "Open sans", Verdana, sans-serif;
   background-color: rgb(211, 211, 211);
+  /* margin: 0; */
 }
 /* Ces selecteurs permettent de mettre en forme que les liens directement dans l'élément body. Ici on leur applique une couleur de fond bisque */
 body > a {
@@ -33,16 +35,16 @@ h1 {
 h2:first-of-type {
   color: rgb(0, 255, 242);
 }
-p:first-of-type {
+/* p:first-of-type {
   color: blue;
   border: 2px solid red;
   padding: 5px;
   font-size: 16px;
-}
+} */
 /* hover permet de changer le style lorsque la souris survol l'élément choisi ici l'élément p */
-p:hover {
+/* p:hover {
   color: rgb(42, 165, 93);
-}
+} */
 /* exemple hover sur un élément H1 */
 h1:hover {
   color: blue;
@@ -75,5 +77,35 @@ tbody {
 }
 /* On cible le 1er lien se trouvant après un élément p dans  */
 p + a{
+  background-color: red;
+}
+.div{
+  color: white; /*Textes des éléments dans les div blancs par héritage*/
+  background-color: purple; /*Les div auront un fond violet*/
+  width: 70%; /*Définit la largeur des div à 80% de leur parent (body ici)*/
+  margin: auto; /* Permet de centrer les div dans leur élément parent (body ici) */
+}
+.div h2{
+  text-align: center;
+}
+span{
+  font-weight: bold; /*Les textes seront en gras*/
+  background-color: yellow; /*Fond des span jaune*/
+  color: black; /*Couleur du texte noire*/
+}
+.conteneur{
+  
+  border: 1px solid black;
+  background-color: lightGrey;
+  width: 50%;
+  margin: 0 auto;
+}
+.conteneur p{
+  font-family: roboto;
+  width: 100%;
+  background-color: yellow;
+}
+.conteneur strong, .conteneur span{
+
   background-color: red;
 }
