@@ -109,3 +109,9 @@ span{
 
   background-color: red;
 }
+.grandSmile{
+  width: 20.2%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
