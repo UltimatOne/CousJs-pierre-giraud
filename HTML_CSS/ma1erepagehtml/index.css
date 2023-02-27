@@ -4,6 +4,8 @@ si un sélecteur est présent plusieurs fois dans la page, le style s'appliquera
 body {
   font-family: "Open sans", Verdana, sans-serif;
   background-color: rgb(211, 211, 211);
+  display: flex;
+  flex-direction: column;
   /* margin: 0; */
 }
 /* Ces selecteurs permettent de mettre en forme que les liens directement dans l'élément body. Ici on leur applique une couleur de fond bisque */
@@ -21,7 +23,7 @@ body > a {
   width: 15%;
   height: 99vh;
 }
-.lateralbar li{
+.lateralbar li {
   margin-top: 5%;
 }
 .container {
@@ -30,6 +32,9 @@ body > a {
 }
 h1 {
   color: red;
+}
+h3{
+  text-align: center;
 }
 /* first-of-type applique le style seulement au 1er element (ici h2) rencontrée dans chaque éléments parents */
 h2:first-of-type {
@@ -58,15 +63,16 @@ th {
 }
 td {
   border: 1px solid black;
+  padding: 10px;
 }
-table {
+.tableau1 {
   border-collapse: separate;
   border-spacing: 0;
   border-width: 1px 0 0 1px;
   margin: 0 0 1.5em;
   width: 100%;
 }
-tbody {
+.corpsTableau1 {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
@@ -75,43 +81,136 @@ tbody {
 .enfants {
   margin-left: 16%;
 }
-/* On cible le 1er lien se trouvant après un élément p dans  */
-p + a{
+/* On cible le 1er lien se trouvant après un élément p  */
+p + a {
   background-color: red;
 }
-.div{
+.div {
   color: white; /*Textes des éléments dans les div blancs par héritage*/
   background-color: purple; /*Les div auront un fond violet*/
-  width: 70%; /*Définit la largeur des div à 80% de leur parent (body ici)*/
-  margin: auto; /* Permet de centrer les div dans leur élément parent (body ici) */
+  width: 70%; /*Définit la largeur des div à 70% de leur parent (body ici)*/
+  margin: 3% auto; /* Permet de centrer les div dans leur élément parent (body ici) */
 }
-.div h2{
+.div h2 {
   text-align: center;
 }
-span{
+span {
   font-weight: bold; /*Les textes seront en gras*/
   background-color: yellow; /*Fond des span jaune*/
   color: black; /*Couleur du texte noire*/
 }
-.conteneur{
-  
+.conteneur {
   border: 1px solid black;
   background-color: lightGrey;
   width: 50%;
   margin: 0 auto;
 }
-.conteneur p{
+.conteneur p {
   font-family: roboto;
   width: 100%;
   background-color: yellow;
 }
-.conteneur strong, .conteneur span{
-
+.conteneur strong,
+.conteneur span {
   background-color: red;
 }
-.grandSmile{
-  width: 20.2%;
+.grandSmileContainer {
   position: fixed;
+  z-index: 1;
   right: 0;
   bottom: 0;
+  margin: 0 1% 1% 0;
+}
+.invisible {
+  visibility: hidden;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  color: aliceblue;
+}
+.nonaffiche {
+  display: none;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  color: aliceblue;
+}
+.contenu {
+  display: contents;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  color: rgb(0, 255, 55);
+}
+.exempleContainer {
+  height: 200px;
+}
+.exemple {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.conteneurAbsolu {
+  width: 100%;
+  height: 200px;
+  display: block;
+  background-color: rgb(102, 130, 221); /*bleuViolet*/
+}
+.absolu {
+  position: absolute;
+}
+.relatif {
+  position: relative;
+}
+.haut {
+  top: 60px; /*Elément décalé de 50px vers le bas p/r à une origine*/
+}
+.gauche {
+  left: 150px; /*Element décalé de 150px vers la droite p/r à une origine*/
+}
+.droite {
+  right: 30px; /*Element décalé de 30px vers la gauche p/r à une origine*/
+}
+.bas {
+  bottom: 20px; /*Element décalé de 30px vers le haut p/r à une origine*/
+}
+.bleu {
+  background-color: #0af;
+}
+.vert {
+  background-color: #0fa;
+}
+.flottant{
+  width: 200px;
+  height: 100px;
+  float: left;
+  background-color: #0AF;/*Bleu*/
+}
+.vide{
+  height: 40px;
+  background-color: #0FA;/*Vert*/
+}
+.para{
+  background-color: #EE6;/*Jaune*/
+  color: black;
+}
+.tableau2{
+  border-collapse: collapse;
+  margin-top: 2%;
+  width: 400px;
+  text-align: center;
+}
+.info{
+  background-color: rgb(255, 100, 100);
+}
+.t1{
+  border : 2px solid black;
+}
+.t2 td, .t2 th{
+  border: 1px solid orange;
+}
+video{
+  width: 100%;
 }

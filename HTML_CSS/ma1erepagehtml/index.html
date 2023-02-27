@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto"
+    />
   </head>
   <body>
     <div class="lateralbar">
@@ -184,9 +187,9 @@
             à télécharger
           </p>
         </div>
-        <div class="grandSmile">
+        <div class="grandSmileContainer">
           <!-- Une image d'un smiley content -->
-          <img  src="smile.png" alt="Un émoji content qui leve 2 doigts" />
+          <img src="smile.png" alt="Un émoji content qui leve 2 doigts" />
         </div>
         <div id="entites">
           <h2>Les entités HTML</h2>
@@ -199,8 +202,8 @@
             Voici quelques-unes des entités les plus courantes et leur
             signification :
           </p>
-          <table>
-            <tbody>
+          <table class="tableau1">
+            <tbody class="corpsTableau1">
               <tr>
                 <th>Nom de l’entité</th>
                 <th>Résultat visuel</th>
@@ -408,6 +411,396 @@
         L'élément <strong>strong</strong> est de type inline, tout comme
         <span>span</span>
       </p>
+    </div>
+    <div class="div">
+      <h2>Display: none, visibility: hidden et display: contents</h2>
+      <p>La partie vide ci dessous contient 2 éléments.</p>
+      <p>
+        Le 1er est en propriété css visibility: hidden ce qui le rend invisible
+        mais conserve sa place dans la page.
+      </p>
+      <p>
+        Le 2eme est en propriété css display: none ce qui le rend invisible
+        aussi mais ne conserve pas sa place dans la page.
+      </p>
+      <p>
+        et pour finir en élément qui n'est pas visible mais qui affiche son
+        contenu quand même avec la propriété css display: contents.
+      </p>
+      <div class="invisible">
+        <p>invisible</p>
+        <img src="./smile.png" alt="image d'un smiley content" />
+      </div>
+      <div class="nonaffiche">
+        <p>Non Affiché</p>
+        <img src="./smile.png" alt="image d'un smiley content" />
+      </div>
+      <div class="contenu">
+        <p>Elément non Affiché mais son contenu est affiché quand même</p>
+        <img src="./smile.png" alt="image d'un smiley content" />
+      </div>
+    </div>
+    <div class="div">
+      <h2>Position</h2>
+      <h3>positon: static</h3>
+      <p>
+        Tous les éléments sont par défaut en position static c'est à dire selon
+        le flux de la page. Les propriétés top, left, bttom et right non ici
+        aucun effet.
+      </p>
+      <h3>position: relative</h3>
+      <p>
+        Attribuer une position : relative à un élément va positionner l’élément
+        dans le flux normal de la page.
+      </p>
+      <p>
+        Cependant, à l’inverse d’un élément HTML positionné avec position :
+        static, un élément positionné avec position : relative va ensuite
+        pouvoir être décalé par rapport à sa position initiale grâce aux
+        propriétés top, left, bottom et right.
+      </p>
+      <p>
+        Il va être possible de positionner un élément relativement à sa position
+        de départ.
+      </p>
+      <p>
+        L’espace occupé initialement par l’élément va continuer à lui appartenir
+        : les autres éléments ne seront pas affectés par le décalage de l'
+        élément et ne vont pas se repositionner.
+      </p>
+      <p>
+        L’élément décalé va pouvoir être à cheval par-dessus d’autres éléments
+        puisque la position de ces autres éléments ne va pas changer en fonction
+        de l’élément décalé.
+      </p>
+      <div class="exempleContainer">
+        <p>Exemple:</p>
+        <div class="carre bleu exemple"></div>
+        <div class="carre vert relatif haut droite exemple"></div>
+        <div class="carre bleu exemple"></div>
+      </div>
+      <h3>Position : absolute</h3>
+      <p>
+        Un élément positionné avec position: absolute va être positionné par
+        rapport à son parent le plus proche positionné (avec une valeur de
+        position différente de static).
+      </p>
+      <p>
+        Si aucun parent positionné n’est trouvé, alors l’élément sera positionné
+        par rapport à l’élément racine représentant la page body
+      </p>
+      <p>
+        Le point de référence pour les propriétés top, left, bottom et right va
+        ainsi être le côté de l’élément parent liée à la propriété (côté gauche
+        pour left, supérieur pour top , etc.).
+      </p>
+      <p>
+        un élément positionné avec position : absolute va être retiré du flux
+        normal de la page. Cela signifie et implique que l’espace initialement
+        attribué à un élément au positionnement absolu (espace attribué selon le
+        flux normal de la page) va être occupé par les éléments suivants.
+      </p>
+      <p>
+        Un élément positionné avec position: absolute va pouvoir se placer
+        par-dessus d’autres éléments.
+      </p>
+      <p>Exemple:</p>
+      <div class="conteneurAbsolu relatif">
+        <div class="exemple bleu"></div>
+        <div class="exemple vert absolu bas droite"></div>
+        <div class="exemple bleu"></div>
+      </div>
+      <h3>Position: fixed et z-index</h3>
+      <p>
+        Le grand smiley en bas à droite est fixé par rapport à la fenêtre
+        (viewport) grâce à la propriété position: fixed avec les positions
+        bottom: 0 et rigth: 0 ( 0 pour bord du bas et pour bord de droite de la
+        fenêtre ). Un margin: 0 1% 1% 0 lui a également été appliqué.
+      </p>
+      <p>
+        Les élément précédents en position absolu et relative passe normalement
+        au dessus du grand smiley.
+      </p>
+      <p>
+        L'utilisation de la propriété z-index a permis de faire passer le grand
+        smiley au dessus.
+      </p>
+      <p>
+        La valeur par défaut pour tout les éléments de la page web de z-index
+        est 0. le grand smiley a un z-index à 1 pour etre au dessus.
+      </p>
+      <h3>Float</h3>
+      <div class="flottant"></div>
+      <div class="vide"></div>
+      <p class="para">
+        Un paragraphe est un élément de type block contenant du texte. Le texte
+        va entourer l'élément flottant mais le paragraphe en soi continue de
+        prendre tout l'espace disponible au sein de son élément parent (vous
+        pouvez observer la couleur de fond ou inspecter l'élément pour vous en
+        convaincre)
+      </p>
+    </div>
+    <div class="div">
+      <h2>tableaux avec l’élément HTML table</h2>
+      <p>Tableau simple avec tr, th et td:</p>
+      <table class="tableau2">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>age</th>
+          <th>Mail</th>
+        </tr>
+        <tr>
+          <td>Goddet</td>
+          <td>Jean-Jacques</td>
+          <td>44</td>
+          <td>jj.goddet@icloud.com</td>
+        </tr>
+        <tr>
+          <td>Dautel</td>
+          <td>Karine</td>
+          <td>Secret</td>
+          <td>non renseigné</td>
+        </tr>
+      </table>
+      <p>Tableau structuré avec thead, tbody et tfoot:</p>
+      <table class="tableau2">
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>Nb visites 2017</th>
+            <th>Nb visites 2018</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Page 1</td>
+            <td>100</td>
+            <td>250</td>
+            <td>350</td>
+          </tr>
+          <tr>
+            <td>Page 2</td>
+            <td>1200</td>
+            <td>5400</td>
+            <td>6600</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>1300</td>
+            <td>5650</td>
+            <td>6950</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p>Fusion des cellules avec les attributs HTML colspan et rowspan:</p>
+      <table class="tableau2">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom 1</th>
+            <th>Prénom 2</th>
+            <th>Prénom 3</th>
+            <th>Adresse mail 1</th>
+            <th>Adresse mail 2</th>
+            <th>Inscrit ?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Goddet</td>
+            <td>Jean-Jacques</td>
+            <td colspan="2">Maxime</td>
+            <td colspan="2">jj.goddet@icloud.com</td>
+            <td rowspan="2">Oui (fusion avec rowspan)</td>
+          </tr>
+          <tr>
+            <td>Dautel</td>
+            <td colspan="3">Karine (fusion avec colspan)</td>
+            <td>blabla@gmail.com</td>
+            <td>lol@hotmail.fr</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>L'élément HTML caption:</p>
+      <table class="tableau2">
+        <caption>
+          Informations participants
+        </caption>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Adresse mail</th>
+            <th>Inscrit ?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Goddet</td>
+            <td>Jean-Jacques</td>
+            <td>jj.goddet@icloud.com</td>
+            <td rowspan="2">Oui</td>
+          </tr>
+          <tr>
+            <td>Dautel</td>
+            <td>Karine</td>
+            <td>blabla@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Les éléments HTML colgroup et col:</p>
+      <table>
+        <caption>
+          Informations participants
+        </caption>
+        <colgroup>
+          <col span="3" class="info" />
+          <col />
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Adresse mail</th>
+              <th>Inscrit ?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Goddet</td>
+              <td>Jean-Jacques</td>
+              <td>jj.goddet@icloud.com</td>
+              <td rowspan="2">Oui</td>
+            </tr>
+            <tr>
+              <td>Dautel</td>
+              <td>Karine</td>
+              <td>blabla@gmail.com</td>
+            </tr>
+          </tbody>
+        </colgroup>
+      </table>
+      <p>border-collapse et border-spacing css:</p>
+      <p>Sans:</p>
+      <table class="t1">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+        </tr>
+        <tr>
+          <td>Goddet</td>
+          <td>Jean-Jacques</td>
+        </tr>
+      </table>
+      <br />
+      <table class="t2">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+        </tr>
+        <tr>
+          <td>Dautel</td>
+          <td>Karine</td>
+        </tr>
+      </table>
+      <br />
+      <table class="t1 t2">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+        </tr>
+        <tr>
+          <td>Goddet</td>
+          <td>Jean-Jacques</td>
+        </tr>
+        <tr>
+          <td>Dautel</td>
+          <td>Karine</td>
+        </tr>
+      </table>
+      <p>Avec:</p>
+      <table class="t1 tableau2">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+        </tr>
+        <tr>
+          <td>Goddet</td>
+          <td>Jean-Jacques</td>
+        </tr>
+      </table>
+      <br />
+      <table class="t2 tableau2">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+        </tr>
+        <tr>
+          <td>Dautel</td>
+          <td>Karine</td>
+        </tr>
+      </table>
+      <br />
+      <table class="t1 t2 tableau2">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+        </tr>
+        <tr>
+          <td>Goddet</td>
+          <td>Jean-Jacques</td>
+        </tr>
+        <tr>
+          <td>Dautel</td>
+          <td>Karine</td>
+        </tr>
+      </table>
+    </div>
+    <div class="div">
+      <h2>Element HTML audio</h2>
+      <p>Juste l'élément HTML audio avec un attribut source:</p>
+      <audio src="./audio/perfect-time.mp3" controls>
+        Votre Navigateur ne semble pas supporter ce format.
+      </audio>
+      <p>
+        L'élément HTML audio avec plusieurs éléments HTML source pour en
+        spécifier plusieurs:
+      </p>
+      <audio controls>
+        <source src="./audio/perfect-time.mp3" type="audio/mpeg" />
+        <source src="./audio/perfect-time.wav" type="audio/wav" />
+        <source
+          src="./audio/perfect-time.ogg"
+          type="audio/ogg; codecs=vorbis"
+        />
+        Votre Navigateur ne semble pas supporter ce format.
+      </audio>
+    </div>
+    <div class="div">
+      <h2>Element HTML video</h2>
+      <p>Juste l'élément HTML video avec un attribut source:</p>
+      <video src="./video/tortue.mp4" controls>
+        Votre Navigateur ne semble pas supporter ce format.
+      </video>
+      <p>
+        L'élément HTML video avec plusieurs éléments HTML source pour en
+        spécifier plusieurs:
+      </p>
+      <video controls poster="./tortuegeniale.jpg">
+        <source src="./video/tortue.mp4" type="video/mp4"/>
+        <source src="./video/tortue.webm" type="video/webm" />
+        Votre Navigateur ne semble pas supporter ce format.
+      </video>
+      <p>Ajouter des sous-titres</p>
+      <video autoplay loop controls muted poster="./tortuegeniale.jpg">
+        <source src="./video/tortue.mp4" type="video/mp4" />
+        <source src="./video/tortue.webm" type="video/webm" />
+        <track kind="subtitles" src="tortue.vtt" srclang="fr" />
+        Votre Navigateur ne semble pas supporter ce format.
+      </video>
     </div>
   </body>
 </html>
