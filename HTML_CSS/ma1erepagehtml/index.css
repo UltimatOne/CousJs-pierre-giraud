@@ -40,6 +40,9 @@ h3{
 h2:first-of-type {
   color: rgb(0, 255, 242);
 }
+p{
+  padding: 1%;
+}
 /* p:first-of-type {
   color: blue;
   border: 2px solid red;
@@ -88,8 +91,8 @@ p + a {
 .div {
   color: white; /*Textes des éléments dans les div blancs par héritage*/
   background-color: purple; /*Les div auront un fond violet*/
-  width: 70%; /*Définit la largeur des div à 70% de leur parent (body ici)*/
-  margin: 3% auto; /* Permet de centrer les div dans leur élément parent (body ici) */
+  width: 85%; /*Définit la largeur des div à 70% de leur parent (body ici)*/
+  margin: 3% 0 0 15%;
 }
 .div h2 {
   text-align: center;

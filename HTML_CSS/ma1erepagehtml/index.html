@@ -537,7 +537,10 @@
         va entourer l'élément flottant mais le paragraphe en soi continue de
         prendre tout l'espace disponible au sein de son élément parent (vous
         pouvez observer la couleur de fond ou inspecter l'élément pour vous en
-        convaincre)
+        convaincre)... Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Deserunt, tempora modi maxime eligendi odio officiis ut et provident
+        repudiandae veritatis beatae dicta adipisci, quo suscipit facilis facere
+        magni quaerat necessitatibus!
       </p>
     </div>
     <div class="div">
@@ -787,18 +790,18 @@
       </video>
       <p>
         L'élément HTML video avec plusieurs éléments HTML source pour en
-        spécifier plusieurs:
+        spécifier plusieurs et l'attribut poster pour avoir une image, comme une jaquette par exemple, avant la lecture:
       </p>
       <video controls poster="./tortuegeniale.jpg">
-        <source src="./video/tortue.mp4" type="video/mp4"/>
+        <source src="./video/tortue.mp4" type="video/mp4" />
         <source src="./video/tortue.webm" type="video/webm" />
         Votre Navigateur ne semble pas supporter ce format.
       </video>
-      <p>Ajouter des sous-titres</p>
+      <p>Ajouter des sous-titres et activation par defaut avec l'attribut default:</p>
       <video autoplay loop controls muted poster="./tortuegeniale.jpg">
         <source src="./video/tortue.mp4" type="video/mp4" />
         <source src="./video/tortue.webm" type="video/webm" />
-        <track kind="subtitles" src="tortue.vtt" srclang="fr" />
+        <track kind="subtitles" src="tortue.vtt" srclang="Francais" default/>
         Votre Navigateur ne semble pas supporter ce format.
       </video>
     </div>
