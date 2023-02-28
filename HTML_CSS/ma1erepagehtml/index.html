@@ -790,20 +790,34 @@
       </video>
       <p>
         L'élément HTML video avec plusieurs éléments HTML source pour en
-        spécifier plusieurs et l'attribut poster pour avoir une image, comme une jaquette par exemple, avant la lecture:
+        spécifier plusieurs et l'attribut poster pour avoir une image, comme une
+        jaquette par exemple, avant la lecture:
       </p>
       <video controls poster="./tortuegeniale.jpg">
         <source src="./video/tortue.mp4" type="video/mp4" />
         <source src="./video/tortue.webm" type="video/webm" />
         Votre Navigateur ne semble pas supporter ce format.
       </video>
-      <p>Ajouter des sous-titres et activation par defaut avec l'attribut default:</p>
+      <p>
+        Ajouter des sous-titres et activation par defaut avec l'attribut
+        default:
+      </p>
       <video autoplay loop controls muted poster="./tortuegeniale.jpg">
         <source src="./video/tortue.mp4" type="video/mp4" />
         <source src="./video/tortue.webm" type="video/webm" />
-        <track kind="subtitles" src="tortue.vtt" srclang="Francais" default/>
+        <track kind="subtitles" src="tortue.vtt" srclang="Francais" default />
         Votre Navigateur ne semble pas supporter ce format.
       </video>
+    </div>
+    <div class="div">
+      <h2>L'élément HTML iframe</h2>
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/Y80juYcu3ZI"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
     </div>
   </body>
 </html>
