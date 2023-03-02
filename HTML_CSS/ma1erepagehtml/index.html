@@ -799,8 +799,8 @@
         Votre Navigateur ne semble pas supporter ce format.
       </video>
       <p>
-        Ajouter des sous-titres et activation par defaut avec l'attribut
-        default:
+        Ajouter des sous-titres en créant un fichier WEBVTT et activation par
+        defaut avec l'attribut default:
       </p>
       <video autoplay loop controls muted poster="./tortuegeniale.jpg">
         <source src="./video/tortue.mp4" type="video/mp4" />
@@ -815,9 +815,43 @@
         src="https://www.youtube-nocookie.com/embed/Y80juYcu3ZI"
         title="YouTube video player"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
         allowfullscreen
       ></iframe>
+    </div>
+    <div class="div">
+      <h2>background-color en CSS</h2>
+      <h3>background-color opaque:</h3>
+      <p id="ex1">background-color: orange</p>
+      <p id="ex2">background-color: #d70e76</p>
+      <p id="ex3">background-color: rgb(0, 120, 240)</p>
+      <h3>background-color semi transparent:</h3>
+      <p id="ex4">background-color: rgba(0, 120, 240, 0.5)</p>
+      <h3>
+        Ajouter différents background-color à un élément parent et à ses
+        enfants:
+      </h3>
+      <p id="ex5">Un paragraphe avec un <span id="ex5span">span</span></p>
+    </div>
+    <div class="div">
+      <h2>background-image en css</h2>
+      <h3>Ajouter une image de fond avec background-image:</h3>
+      <div id="exemp1" class="bgImage"></div>
+      <h3>Ajouter plusieurs images de fond avec background-image:</h3>
+      <div id="exemp2" class="bgImage"></div>
+      <p>
+        Seule la première image déclarée est visible. C’est un comportement tout
+        à fait normal et cela signifie que la première image déclarée a bien été
+        chargée. Cependant, la deuxième image a bien été placée en arrière-plan
+        également, seulement elle est cachée sous la première.
+      </p>
+      <p>
+        Cette deuxième image va être visible dans deux cas : si la première
+        image ne peut pas être affichée ou si la première image ne remplit pas
+        le fond de l’élément (et que la deuxième image est plus grande que la
+        première)
+      </p>
+      <p><strong>Une bonne pratique est de déclarer une couleur de fond avec une image de fond.</strong></p>
     </div>
   </body>
 </html>

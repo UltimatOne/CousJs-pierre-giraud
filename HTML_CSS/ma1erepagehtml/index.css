@@ -94,6 +94,10 @@ p + a {
   width: 85%; /*Définit la largeur des div à 70% de leur parent (body ici)*/
   margin: 3% 0 0 15%;
 }
+.div p{
+  width: 50%;
+  margin: auto;
+}
 .div h2 {
   text-align: center;
 }
@@ -221,4 +225,43 @@ iframe{
   width: 560px;
   height: 315px;
   margin-left: 33%;
+}
+#ex1{
+  background-color: orange;
+}
+#ex2{
+  background-color: #d70e76;
+}
+#ex3{
+  background-color: rgb(0, 120, 240);
+}
+#ex4{
+  background-color: rgba(0, 120, 240, 0.5);
+}
+#ex5{
+  background-color: rgba(0, 120, 240, 0.5);
+}
+#ex5span{
+  background-color: yellow;
+}
+#ex1, #ex2, #ex3, #ex4, #ex5{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 20%;
+  margin: 1% auto;
+}
+.bgImage{
+  width: 300px;
+  height: 300px;
+  border: 5px solid #333;
+  margin: 0 auto;
+}
+#exemp1{
+  background-image: url('./tortuegeniale.jpg');
+}
+#exemp2{
+  background-color: black;
+  background-image: url('./tortuegeniale.jpg'), url('./smile.png');
 }
