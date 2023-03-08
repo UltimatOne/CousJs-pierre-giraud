@@ -770,7 +770,7 @@
       </audio>
       <p>
         L'élément HTML audio avec plusieurs éléments HTML source pour en
-        spécifier plusieurs:
+        spécifier plusieurs en cas de non-compatibilité d'un des formats avec les différents navigateurs:
       </p>
       <audio controls>
         <source src="./audio/perfect-time.mp3" type="audio/mpeg" />
@@ -851,7 +851,7 @@
         le fond de l’élément (et que la deuxième image est plus grande que la
         première)
       </p>
-      <p><strong>Une bonne pratique est de déclarer une couleur de fond avec une image de fond.</strong></p>
+      <p><strong>Une bonne pratique est de déclarer une couleur de fond avec une image de fond au cas où l'image ne pourrait pas être chargée.</strong></p>
     </div>
   </body>
 </html>

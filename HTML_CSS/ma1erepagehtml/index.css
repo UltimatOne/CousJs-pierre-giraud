@@ -261,6 +261,7 @@ iframe{
 #exemp1{
   background-image: url('./tortuegeniale.jpg');
 }
+/* 2 images l'une sur l'autre, dans cette configuration seule tortuegeniale.jpg est visible. smile.jpg est une couche (layer) en dessous */
 #exemp2{
   background-color: black;
   background-image: url('./tortuegeniale.jpg'), url('./smile.png');
