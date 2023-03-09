@@ -894,6 +894,261 @@
       <div class="repeat2 size"></div>
       <p>size avec plusieurs images:</p>
       <div class="repeat2 size2"></div>
+      <h3>background-origin:</h3>
+      <p>
+        La propriété background-origin nous permet d’ajuster la zone dans
+        laquelle notre ou nos images de fond vont pouvoir se placer ou plus
+        exactement de déterminer la position de l’origine (donc de son coin
+        supérieur gauche par défaut) de l’image de fond dans son élément.
+      </p>
+      <p>
+        Notez que si on a appliqué un background-attachment : fixed à notre
+        élément, alors la propriété background-origin sera tout simplement
+        ignorée (l’image de fond sera fixe en toutes circonstances).
+      </p>
+      <p>
+        On va pouvoir passer l’une de ces trois valeurs à background-origin :
+      </p>
+      <ul>
+        <li>
+          border-box : la position de l’origine de l’image de fond va être
+          déterminée par rapport à la bordure de l’élément. Le coin supérieur
+          gauche de l’image va donc se situer derrière la bordure supérieure
+          gauche par défaut ;
+        </li>
+        <div class="repeat4 borderbox"></div>
+        <li>
+          padding-box : valeur par défaut. La position de l’origine de l’image
+          va être déterminée par rapport à la boite représentant le contenu +
+          marges internes de l’élément. Le point d’origine de l’image est donc à
+          l’extérieur des bordures ;
+        </li>
+        <div class="repeat4 paddingbox"></div>
+        <li>
+          content-box : la position de l’origine de l’image va être déterminée
+          par rapport à la boite représentant le contenu de l’élément. Elle ne
+          va donc pas recouvrir l’espace supérieur gauche occupé par le padding
+          par défaut.
+        </li>
+        <div class="repeat4 contentbox"></div>
+      </ul>
+      <h3>background-position:</h3>
+      <p>
+        La propriété CSS background-position va nous permettre de définir à
+        partir de quelle position une image de fond doit s’afficher dans la
+        surface de fond de l’élément associé et relativement à la surface de la
+        zone de fond qu’elle peut occuper (qui a été définie avec
+        background-origin).
+      </p>
+      <p>
+        Cette propriété va pouvoir prendre des mots clefs en valeur comme top,
+        right, bottom, left ou center ou des distances relatives ou absolues
+        comme 25% ou 50px ou un mélange des deux comme bottom 50px qui indique
+        que le bord bas de l’image de fond sera situé à 50px du « bas de
+        l’élément » (selon la zone de fond définie avec background-origin une
+        nouvelle fois).
+      </p>
+      <p>
+        On va pouvoir passer une ou deux valeurs (simples comme bottom ou
+        composées comme bottom 50px) à background-position. En ne passant qu’une
+        valeur :
+      </p>
+      <ul>
+        <li>background-position : center va centrer l’image de fond ;</li>
+        <div class="repeat4 borderboxcenter"></div>
+        <li>
+          Les autres mots clefs vont coller l’image de fond au bord
+          correspondant au mot clef et la deuxième position (horizontale ou
+          verticale) sera par défaut déterminée à 50% de la taille de l’élément.
+          Le point de départ de l’affichage de l’image de fond (dans le cas où
+          elle serait plus grande que l’élément associé) sera déterminé par le
+          mot clef ;
+        </li>
+        <p>border-box top:</p>
+        <div class="repeat4 borderboxtop"></div>
+        <p>content-box top:</p>
+        <div class="repeat4 contentboxtop"></div>
+        <p>border-box top right:</p>
+        <div class="repeat4 borderboxtopright"></div>
+        <p>border-box bottom 20px right 100px:</p>
+        <div class="repeat4 borderboxbottomright"></div>
+        <li>
+          Une longueur absolue ou relative va déterminer la position de l’image
+          de fond par rapport au bord gauche de l’élément. La position verticale
+          calculée sera 50% de la hauteur de l’élément. Le point de départ de
+          l’image sera également son bord gauche.
+        </li>
+      </ul>
+      <p>
+        En passant deux valeurs à background-position, la première valeur
+        déterminera le point d’origine de l’image sur l’axe horizontal tandis
+        que la seconde valeur déterminera le point d’origine de l’image dans
+        l’axe vertical.
+      </p>
+      <h3>background-clip:</h3>
+      <p>
+        La propriété background-clip permet de définir la surface du fond de
+        l’élément dans laquelle l’image de fond va être visible ou pas.
+      </p>
+      <p>
+        Cette propriété va pouvoir prendre les mêmes valeurs que
+        background-origin à savoir :
+      </p>
+      <ul>
+        <li>
+          border-box : valeur par défaut. L’image de fond sera visible jusque
+          sous les bordures de l’élément (on pourra la voir dans le cas d’une
+          bordure en pointillés par exemple) ;
+        </li>
+        <li>
+          padding-box : l’image de fond sera visible jusqu’à la limite de la
+          marge intérieure (padding) mais la partie sous les bordures de
+          l’élément ne le sera pas ;
+        </li>
+        <li>
+          content-box : l’image de fond ne sera visible que dans l’espace
+          relatif à la boite entourant le contenu de l’élément.
+        </li>
+      </ul>
+      <p>
+        Il convient cependant de ne pas confondre les propriétés background-clip
+        et background-origin : la propriété background-origin sert à déterminer
+        le point d’origine de l’image de fond, c’est-à-dire à partir d’où
+        celle-ci va être placée tandis que background-clip va nous permettre de
+        définir quelle partie du fond va être affichée / visible.
+      </p>
+      <p>background-origin: border-box<br />background-clip: border-box</p>
+      <div class="repeat5 bobbbcbb"></div>
+      <p>background-origin: border-box<br />background-clip: content-box</p>
+      <div class="repeat5 bobbbccb"></div>
+      <p>background-origin: content-box<br />background-clip: border-box</p>
+      <div class="repeat5 bocbbcbb"></div>
+      <p>background-origin: content-box<br />background-clip: content-box</p>
+      <div class="repeat5 bocbbccb"></div>
+      <h3>Raccourci background:</h3>
+      <p>
+        La propriété CSS background est la notation short hand ou notation
+        raccourcie des propriétés liées au fond. En CSS 2, la propriété
+        background permettait de définir une couleur et / ou une image de fond
+        pour un élément HTML ainsi que le comportement de répétition, le
+        défilement et la position du fond.
+      </p>
+
+      <p>
+        La propriété background était donc une propriété condensée des
+        propriétés background-color, background-image, background-repeat,
+        background-attachment et background-position.
+      </p>
+
+      <p>
+        En CSS 3, ses fonctionnalités ont été étendues pour refléter les apports
+        du CSS 3 en termes d’outil de gestion du fond et la propriété background
+        dans sa nouvelle définition permet aujourd’hui également de gérer
+        plusieurs fonds d’un coup ainsi que de définir les comportements
+        relatifs aux propriétés background-size, background-origin et
+        background-clip pour un fond.
+      </p>
+
+      <p>
+        Attention cependant : même si la plupart des navigateurs supportent
+        parfaitement ces ajouts, je vous rappelle que ce module du CSS 3 n’est
+        pas encore reconnu comme recommandation officielle par le W3C mais est
+        seulement candidat au statut de recommandation et est donc
+        potentiellement sujet à modifications (même si elles sont peu
+        probables).
+      </p>
+
+      <p>
+        L’ordre de déclaration des valeurs de la propriété background va être le
+        suivant :
+      </p>
+      <ol>
+        <li>La valeur relative à la propriété background-image ;</li>
+        <li>
+          Les valeurs relatives aux propriétés background-position /
+          background-size (avec le slash entre les deux valeurs);
+        </li>
+        <li>La valeur relative à la propriété background-repeat ;</li>
+        <li>La valeur relative à la propriété background-attachment ;</li>
+        <li>La valeur relative à la propriété background-origin ;</li>
+        <li>La valeur relative à la propriété background-clip ;</li>
+        <li>La valeur relative à la propriété background-color.</li>
+      </ol>
+      <p>
+        Notez que si certaines valeurs sont omises, alors les valeurs par défaut
+        des différentes propriétés seront utilisées. Pour rappel, les valeurs
+        par défaut de background vont être : background : none 0% 0% / auto auto
+        repeat scroll padding-box padding-box transparent.
+      </p>
+      <p>
+        Pour déclarer plusieurs fonds, il suffira une nouvelle fois de séparer
+        les déclarations complètes par une virgule. Attention cependant, pour
+        que la propriété background fonctionne correctement avec des fonds
+        multiples il faudra absolument réserver la valeur relative à la couleur
+        de fond (background-color) pour le dernier fond déclaré.
+      </p>
+      <p>Une déclaration en omettant des valeurs</p>
+      <div class="repeat6 incomplet"></div>
+      <p>Une déclaration complète</p>
+      <div class="repeat6 complet"></div>
+      <p>2 images de fond avec background</p>
+      <div class="repeat6 deuximages"></div>
+    </div>
+    <div class="div">
+      <h2>Dégradés linéaires en CSS avec linear-gradient</h2>
+      <h3>Dégradés linéaires simples:</h3>
+      <p>background:linear-gradient(yellow,red)</p>
+      <div class="degrade lineargradient"></div>
+      <p>background:linear-gradient(to bottom, yellow,red)</p>
+      <div class="degrade lineargradienttobottom"></div>
+      <p>ackground:linear-gradient(180deg, yellow,red)</p>
+      <div class="degrade lineargradient180"></div>
+      <p>background:linear-gradient(to bottom, yellow 0%,red 100%)</p>
+      <div class="degrade lineargradienttobottom0100"></div>
+      <p>background:linear-gradient(to top, red, yellow)</p>
+      <div class="degrade lineargradienttotopcolorinverse"></div>
+      <p>Ici, les cinq dégradés sont strictement identiques.</p>
+      <p>
+        Note: Si on ne précise pas de direction pour un dégradé linéaire, alors
+        la direction du dégradé sera par défaut verticale du haut vers le bas
+        c’est-à-dire to bottom ou encore 180deg.
+      </p>
+      <h3>Dégradés avec direction et color stops:</h3>
+      <p>Un dégradé linéaire à 3 couleurs</p>
+      <p>background:linear-gradient(yellow, red, purple)</p>
+      <div class="degrade degrade3colors"></div>
+      <p>Color stops personnalisés</p>
+      <p>background:linear-gradient(yellow 40%, red 60%, purple)</p>
+      <div class="degrade degrade3colorscolstop"></div>
+      <p>Color stops personnalisés negatif ( en dehors de l'élément )</p>
+      <p>background:linear-gradient(yellow -40%, red 20%, purple)</p>
+      <div class="degrade degrade3colorscolstopneg"></div>
+      <h3>Dégradés semi-transparents:</h3>
+      <p>Un dégradé linéaire bleu -> vert</p>
+      <p>background:linear-gradient(RGB(0,120,240), RGB(0,240,120))</p>
+      <div class="degrade bleuvert"></div>
+      <p>Un dégradé linéaire bleu -> vert semi transparent</p>
+      <p>
+        background:linear-gradient(RGBa(0,120,240,0.5), RGBa(0,240,120,0.5))
+      </p>
+      <div class="degrade bleuvertst"></div>
+      <p>
+        Dégradé bleu semi transparent au début, opaque au milieu puis semi
+        transparent à la fin
+      </p>
+      <p>
+        background:linear-gradient(RGBa(0,120,240,0.5),
+        RGB(0,120,240),RGBa(0,120,240,0.5))
+      </p>
+      <div class="degrade bleustbleubleust"></div>
+      <h3>Ajouter un effet de couleur par-dessus une image de fond:</h3>
+      <p>Un dégradé linéaire semi transparent devant une image de fond</p>
+      <p>background:linear-gradient(RGBa(0,120,240,0.2), RGBa(0,240,120,0.5)), url('./smile.png')</p>
+      <div class="degrade degradedevant"></div>
+      <p>L'inverse ( image de fond devant le dégradé )</p>
+      <p>background: url('./smile.png'), linear-gradient(RGBa(0,120,240,0.2), RGB(0,120,240),RGBa(0,120,240,0.2))</p>
+      <div class="degrade imagedevant"></div>
+      <h3>La répétition des dégradés:</h3>
     </div>
   </body>
 </html>

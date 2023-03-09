@@ -33,14 +33,14 @@ body > a {
 h1 {
   color: red;
 }
-h3{
+h3 {
   text-align: center;
 }
 /* first-of-type applique le style seulement au 1er element (ici h2) rencontrée dans chaque éléments parents */
 h2:first-of-type {
   color: rgb(0, 255, 242);
 }
-p{
+p {
   padding: 1%;
 }
 /* p:first-of-type {
@@ -185,62 +185,67 @@ span {
 .vert {
   background-color: #0fa;
 }
-.flottant{
+.flottant {
   width: 200px;
   height: 100px;
   float: left;
-  background-color: #0AF;/*Bleu*/
+  background-color: #0af; /*Bleu*/
 }
-.vide{
+.vide {
   height: 40px;
-  background-color: #0FA;/*Vert*/
+  background-color: #0fa; /*Vert*/
 }
-.para{
-  background-color: #EE6;/*Jaune*/
+.para {
+  background-color: #ee6; /*Jaune*/
   color: black;
 }
-.tableau2{
+.tableau2 {
   border-collapse: collapse;
   margin-top: 2%;
   width: 400px;
   text-align: center;
 }
-.info{
+.info {
   background-color: rgb(255, 100, 100);
 }
-.t1{
-  border : 2px solid black;
+.t1 {
+  border: 2px solid black;
 }
-.t2 td, .t2 th{
+.t2 td,
+.t2 th {
   border: 1px solid orange;
 }
-video{
+video {
   width: 100%;
 }
-iframe{
+iframe {
   width: 560px;
   height: 315px;
   margin-left: 33%;
 }
-#ex1{
+#ex1 {
   background-color: orange;
 }
-#ex2{
+#ex2 {
   background-color: #d70e76;
 }
-#ex3{
+#ex3 {
   background-color: rgb(0, 120, 240);
 }
-#ex4{
+#ex4 {
   background-color: rgba(0, 120, 240, 0.5);
 }
-#ex5{
+#ex5 {
   background-color: rgba(0, 120, 240, 0.5);
 }
-#ex5span{
+#ex5span {
   background-color: yellow;
 }
-#ex1, #ex2, #ex3, #ex4, #ex5{
+#ex1,
+#ex2,
+#ex3,
+#ex4,
+#ex5 {
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
@@ -248,69 +253,216 @@ iframe{
   width: 20%;
   margin: 1% auto;
 }
-.bgImage{
+.bgImage {
   width: 300px;
   height: 300px;
   border: 5px solid #333;
   margin: 0 auto;
 }
-#exemp1{
-  background-image: url('./tortuegeniale.jpg');
+#exemp1 {
+  background-image: url("./tortuegeniale.jpg");
 }
 /* 2 images l'une sur l'autre, dans cette configuration seule tortuegeniale.jpg est visible. smile.jpg est une couche (layer) en dessous */
-#exemp2{
+#exemp2 {
   background-color: black;
-  background-image: url('./tortuegeniale.jpg'), url('./smile.png');
+  background-image: url("./tortuegeniale.jpg"), url("./smile.png");
 }
-.repeat1{
+.repeat1 {
   width: 320px;
   height: 320px;
   border: 5px solid #333;
   margin: 10px auto;
-  background-image: url('./smile.png');
+  background-image: url("./smile.png");
   background-color: rgba(255, 255, 0, 0.5);
 }
-.repeat2{
+.repeat2 {
   width: 320px;
   height: 160px;
   border: 5px solid #333;
   margin: 10px auto;
-  background-image: url('./smile.png');
+  background-image: url("./smile.png");
   background-size: 30%;
   background-color: rgba(255, 255, 0, 0.5);
 }
-.norepeat{
+.norepeat {
   background-repeat: no-repeat;
 }
-.roundnorepeat{
+.roundnorepeat {
   background-repeat: round no-repeat;
 }
-.spacenorepeat{
+.spacenorepeat {
   background-repeat: space no-repeat;
 }
-.repeat3{
+.repeat3 {
   width: 320px;
   height: 160px;
   border: 5px solid #333;
   margin: 10px auto;
-  background-image: url('./smile.png'), url('./smile_think.png');
+  background-image: url("./smile.png"), url("./smile_think.png");
   background-size: 20%;
   background-color: rgba(255, 255, 0, 0.5);
   background-repeat: repeat-x, repeat-y; /*repeat no-repeat, no-repeat repeat*/
 }
-.contain{
+.contain {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.cover{
+.cover {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.size{
+.size {
   background-size: 25% 50%;
 }
-.size2{
+.size2 {
   background-image: url("./smile.png"), url("./smile_think.png");
   background-size: 25% 50%, contain;
   background-repeat: repeat-x, space;
+}
+.repeat4 {
+  width: 400px;
+  height: 100px;
+  border: 5px dashed #333;
+  padding: 10px;
+  margin: 10px auto;
+  background-image: url("./tortuegeniale.jpg");
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.borderbox {
+  background-origin: border-box;
+}
+.paddingbox {
+  background-origin: padding-box;
+}
+.contentbox {
+  background-origin: content-box;
+}
+.borderboxcenter {
+  background-origin: border-box;
+  background-position: center;
+}
+.borderboxtop {
+  background-origin: border-box;
+  background-position: top;
+}
+.contentboxtop {
+  background-origin: content-box;
+  background-position: top;
+}
+.borderboxtopright {
+  background-origin: border-box;
+  background-position: top right;
+}
+.borderboxbottomright {
+  background-origin: border-box;
+  background-position: bottom 20px right 100px;
+}
+.repeat5 {
+  width: 300px;
+  height: 100px;
+  border: 5px dashed #333;
+  padding: 10px;
+  margin: 10px auto;
+  background-image: url("./tortuegeniale.jpg");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.bobbbcbb {
+  background-origin: border-box;
+  background-clip: border-box;
+}
+.bobbbccb {
+  background-origin: border-box;
+  background-clip: content-box;
+}
+.bocbbcbb {
+  background-origin: content-box;
+  background-clip: border-box;
+}
+.bocbbccb {
+  background-origin: content-box;
+  background-clip: content-box;
+}
+.repeat6 {
+  width: 300px;
+  height: 150px;
+  border: 5px dashed #333;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: RGBa(255, 255, 255, 0.5);
+}
+
+/*Une déclaration en omettant des valeurs*/
+.incomplet {
+  background: url("./smile.png") center / 50px repeat-x RGBa(250, 250, 0, 0.2);
+}
+
+/*Une déclaration complète*/
+.complet {
+  background: url("./smile.png") top right / 50px auto repeat-x padding-box
+    content-box RGBa(250, 250, 0, 0.2);
+}
+/*2 images de fond avec background*/
+.deuximages {
+  background: url("./smile.png") top right / 50px repeat-x content-box,
+    url("./smile_think.png") bottom left / 50px no-repeat RGBa(250, 250, 0, 0.2);
+}
+.degrade{
+  width: 50%;
+  height: 100px;
+  border: 2px solid #333;
+  margin: 10px auto;
+}
+
+.lineargradient{
+  background:linear-gradient(yellow,red);
+}
+.lineargradienttobottom{
+  background:linear-gradient(to bottom, yellow,red);
+}
+.lineargradient180{
+  background:linear-gradient(180deg, yellow,red);
+}
+.lineargradienttobottom0100{
+  background:linear-gradient(to bottom, yellow 0%,red 100%);
+}
+.lineargradienttotopcolorinverse{
+  background:linear-gradient(to top, red, yellow);
+}
+/*Un dégradé linéaire à 3 couleurs*/
+.degrade3colors{
+  background:linear-gradient(yellow, red, purple);
+}
+/*Color stops personnalisés*/
+.degrade3colorscolstop{
+  background:linear-gradient(yellow 40%, red 60%, purple);
+}
+.degrade3colorscolstopneg{
+  background:linear-gradient(yellow -40%, red 20%, purple);
+}
+/*Un dégradé linéaire bleu -> vert*/
+.bleuvert{
+  background:linear-gradient(RGB(0,120,240), RGB(0,240,120));
+}
+
+/*Un dégradé linéaire bleu -> vert semi transparent*/
+.bleuvertst{
+    background:linear-gradient(RGBa(0,120,240,0.5), RGBa(0,240,120,0.5));
+}
+
+/*Dégradé bleu semi transparent au début, opaque au milieu puis semi transparent à la fin*/
+.bleustbleubleust{
+    background:linear-gradient(RGBa(0,120,240,0.2), RGB(0,120,240),RGBa(0,120,240,0.5));
+}
+/*Un dégradé linéaire semi transparent devant une image de fond*/
+.degradedevant{
+    background:linear-gradient(RGBa(0,120,240,0.2), RGBa(0,240,120,0.2)), url('./smile.png') no-repeat top;
+}
+
+/*L'inverse ( image de fond devant le dégradé )*/
+.imagedevant{
+    background: url('./smile.png') no-repeat top, linear-gradient(RGBa(0,120,240,0.2), RGB(0,120,240),RGBa(0,120,240,0.2));
 }
