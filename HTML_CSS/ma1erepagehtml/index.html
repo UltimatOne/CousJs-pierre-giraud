@@ -770,7 +770,8 @@
       </audio>
       <p>
         L'élément HTML audio avec plusieurs éléments HTML source pour en
-        spécifier plusieurs en cas de non-compatibilité d'un des formats avec les différents navigateurs:
+        spécifier plusieurs en cas de non-compatibilité d'un des formats avec
+        les différents navigateurs:
       </p>
       <audio controls>
         <source src="./audio/perfect-time.mp3" type="audio/mpeg" />
@@ -851,7 +852,48 @@
         le fond de l’élément (et que la deuxième image est plus grande que la
         première)
       </p>
-      <p><strong>Une bonne pratique est de déclarer une couleur de fond avec une image de fond au cas où l'image ne pourrait pas être chargée.</strong></p>
+      <p>
+        <strong
+          >Une bonne pratique est de déclarer une couleur de fond avec une image
+          de fond au cas où l'image ne pourrait pas être chargée.</strong
+        >
+      </p>
+      <h3>Background-repeat:</h3>
+      <p>
+        La propriété background-repeat va nous permettre de définir si une image
+        d’arrière-plan doit être répétée ou pas et selon quel(s) axe(s) (axe
+        horizontal et / ou vertical). Par défaut, une image de fond va être
+        rognée à la taille de l’élément en largeur et / ou en hauteur si elle
+        plus grande que celui-ci et au contraire être répétée horizontalement et
+        verticalement si elle est plus petite que l’élément jusqu’à remplir la
+        surface de fond définie.
+      </p>
+      <div class="repeat1"></div>
+      <h3>Les propriétés de Background-repeat:</h3>
+      <p>no-repeat</p>
+      <div class="repeat2 norepeat"></div>
+      <p>round no-repeat</p>
+      <div class="repeat2 roundnorepeat"></div>
+      <p>space no-repeat</p>
+      <div class="repeat2 spacenorepeat"></div>
+      <p>
+        Si plusieurs images de fond ont été déclarées avec background-image pour
+        l’élément, alors on va pouvoir gérer le comportement de répétition de
+        chacune d’entre elles exactement de la même façon : en passant plusieurs
+        valeurs à background-repeat séparées par des virgules. Chaque valeur va
+        s’appliquer à l’image de fond correspondante déclarée avec
+        background-image.
+      </p>
+      <div class="repeat3"></div>
+      <h3>background-size:</h3>
+      <p>contain:</p>
+      <div class="repeat2 contain"></div>
+      <p>cover:</p>
+      <div class="repeat2 cover"></div>
+      <p>size:</p>
+      <div class="repeat2 size"></div>
+      <p>size avec plusieurs images:</p>
+      <div class="repeat2 size2"></div>
     </div>
   </body>
 </html>

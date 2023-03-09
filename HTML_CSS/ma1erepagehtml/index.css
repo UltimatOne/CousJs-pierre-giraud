@@ -94,10 +94,6 @@ p + a {
   width: 85%; /*Définit la largeur des div à 70% de leur parent (body ici)*/
   margin: 3% 0 0 15%;
 }
-.div p{
-  width: 50%;
-  margin: auto;
-}
 .div h2 {
   text-align: center;
 }
@@ -265,4 +261,56 @@ iframe{
 #exemp2{
   background-color: black;
   background-image: url('./tortuegeniale.jpg'), url('./smile.png');
+}
+.repeat1{
+  width: 320px;
+  height: 320px;
+  border: 5px solid #333;
+  margin: 10px auto;
+  background-image: url('./smile.png');
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.repeat2{
+  width: 320px;
+  height: 160px;
+  border: 5px solid #333;
+  margin: 10px auto;
+  background-image: url('./smile.png');
+  background-size: 30%;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.norepeat{
+  background-repeat: no-repeat;
+}
+.roundnorepeat{
+  background-repeat: round no-repeat;
+}
+.spacenorepeat{
+  background-repeat: space no-repeat;
+}
+.repeat3{
+  width: 320px;
+  height: 160px;
+  border: 5px solid #333;
+  margin: 10px auto;
+  background-image: url('./smile.png'), url('./smile_think.png');
+  background-size: 20%;
+  background-color: rgba(255, 255, 0, 0.5);
+  background-repeat: repeat-x, repeat-y; /*repeat no-repeat, no-repeat repeat*/
+}
+.contain{
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.cover{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.size{
+  background-size: 25% 50%;
+}
+.size2{
+  background-image: url("./smile.png"), url("./smile_think.png");
+  background-size: 25% 50%, contain;
+  background-repeat: repeat-x, space;
 }
