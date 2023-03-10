@@ -1101,7 +1101,7 @@
       <div class="degrade lineargradient"></div>
       <p>background:linear-gradient(to bottom, yellow,red)</p>
       <div class="degrade lineargradienttobottom"></div>
-      <p>ackground:linear-gradient(180deg, yellow,red)</p>
+      <p>background:linear-gradient(180deg, yellow,red)</p>
       <div class="degrade lineargradient180"></div>
       <p>background:linear-gradient(to bottom, yellow 0%,red 100%)</p>
       <div class="degrade lineargradienttobottom0100"></div>
@@ -1143,12 +1143,67 @@
       <div class="degrade bleustbleubleust"></div>
       <h3>Ajouter un effet de couleur par-dessus une image de fond:</h3>
       <p>Un dégradé linéaire semi transparent devant une image de fond</p>
-      <p>background:linear-gradient(RGBa(0,120,240,0.2), RGBa(0,240,120,0.5)), url('./smile.png')</p>
+      <p>
+        background:linear-gradient(RGBa(0,120,240,0.2), RGBa(0,240,120,0.2)),
+        url('./smile.png')
+      </p>
       <div class="degrade degradedevant"></div>
       <p>L'inverse ( image de fond devant le dégradé )</p>
-      <p>background: url('./smile.png'), linear-gradient(RGBa(0,120,240,0.2), RGB(0,120,240),RGBa(0,120,240,0.2))</p>
+      <p>
+        background: url('./smile.png'), linear-gradient(RGBa(0,120,240,0.2),
+        RGB(0,120,240),RGBa(0,120,240,0.2))
+      </p>
       <div class="degrade imagedevant"></div>
-      <h3>La répétition des dégradés:</h3>
+      <h3>Plusieurs dégradés en fond d’un élément:</h3>
+      <p>
+        Dégradé jaune-> rouge-> violet:<br />
+        background:linear-gradient(RGB(240,240,0), RGB(240,0,0), RGB(120,0,240))
+      </p>
+      <div class="degrade degradejaunerougeviolet"></div>
+      <p>
+        Dégradé bleu foncé-> bleu-> vert:<br />
+        background:linear-gradient(RGB(0,0,120), RGB(0,0,240), RGB(0,240,0))
+      </p>
+      <div class="degrade degradebleufoncebleuvert"></div>
+      <p>
+        Mélange des deux dégradés précédents:<br />
+        background:linear-gradient(RGBa(240,240,0,0.5), RGBa(240,0,0,0.5),
+        RGBa(120,0,240,0.5)),<br />
+        linear-gradient(RGBa(0,0,120,0.5), RGBa(0,0,240,0.5), RGBa(0,240,0,0.5))
+      </p>
+      <div class="degrade degrademelange"></div>
+      <h3>Répétition des dégradés:</h3>
+      <p>Dégradé jaune, rouge stop 10%, bleu stop 20%:<br>background: linear-gradient(yellow, red 10%, blue 20%)</p>
+      <div class="degrade yellowred10blue20"></div>
+      <p>Répétition dégradé jaune, rouge stop 10%, bleu stop 20%<br>background: repeating-linear-gradient(yellow, red 10%, blue 20%)</p>
+      <div class="degrade repeatyellowred10blue20"></div>
+      <p>On constate sur la répétion que la transition entre le bleu et le jaune se fait brutalement et non de façon dégradée.</p>
+      <p>Si ce n'est pas l'effet désiré il suffira de répéter la 1ere couleur à la fin en ajoutant un color stop à 30%</p>
+      <p>Dégradé jaune, rouge stop 10%, bleu stop 20%, jaune 30%:<br>background: repeating-linear-gradient(yellow, red 10%, blue 20%, yellow 30%)</p>
+      <div class="degrade repeatyellowred10blue20yellow30"></div>
+      <h2>Dégradé Radial</h2>
+      <h3>dégradés radiaux simples</h3>
+      <p>Dégradé radial simple (avec point d'origine au centre de l'élément) jaune, vert et bleu:<br>background:radial-gradient(yellow, green, blue)</p>
+      <div class="degraderadial radialyellowgreenblue"></div>
+      <p>Dégradé radial simple (avec point d'origine au centre de l'élément) de type cercle jaune, vert et bleu:<br>background:radial-gradient(circle, yellow, green, blue)</p>
+      <div class="degraderadial radialcircleyellowgreenblue"></div>
+      <p>Dégradé radial simple (avec point d'origine au centre de l'élément) jaune color stop à 40%, vert color stop à 60%et bleu:<br>background:radial-gradient(yellow 40%, green 60%, blue)</p>
+      <div class="degraderadial radialyellow40green60blue"></div>
+      <p>Dégradé radial simple (avec point d'origine en haut et au centre de l'élément) jaune, vert et bleu:<br>background:radial-gradient(at top, yellow, green, blue)</p>
+      <div class="degraderadial radialattopyellowgreenblue"></div>
+      <p>Dégradé radial simple (avec point d'origine à 20% du bord gauche et 80% du bord haut de l'élément) jaune, vert et bleu:<br>background:radial-gradient(at 20% 80%, yellow, green, blue)</p>
+      <div class="degraderadial radialat2080yellowgreenblue"></div>
+      <p>Dégradé radial simple avec la valeur closest-side en taille ce qui le contraint dans l'élément.<br>Il s'arrête dès qu'il touche un bord:<br>background:radial-gradient(closest-side, yellow, green, blue)</p>
+      <div class="degraderadial radialclosestyellowgreenblue"></div>
+      <h3>Dégradés radiaux complexes:</h3>
+      <p><br>background:radial-gradient(closest-side circle, yellow, green, blue)</p>
+      <div class="degraderadial radialclosestcircleyellowgreenblue"></div>
+      <p><br>background:radial-gradient(100px circle at top, yellow, green, blue)</p>
+      <div class="degraderadial radial100circleattopyellowgreenblue"></div>
+      <p><br>background:radial-gradient(100px 50px at 25% 50%, yellow 40%, green 60%, blue)</p>
+      <div class="degraderadial radial10050at2050yellow40green60blue"></div>
+      <p>Déclaration aberrante<br>background:radial-gradient(100px 50px circle at 25% 50%, yellow, green, blue)</p>
+      <div class="degraderadial radialaberrant"></div>
     </div>
   </body>
 </html>

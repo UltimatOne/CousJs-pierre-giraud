@@ -455,7 +455,7 @@ iframe {
 
 /*Dégradé bleu semi transparent au début, opaque au milieu puis semi transparent à la fin*/
 .bleustbleubleust{
-    background:linear-gradient(RGBa(0,120,240,0.2), RGB(0,120,240),RGBa(0,120,240,0.5));
+    background:linear-gradient(RGBa(0,120,240,0.5), RGB(0,120,240),RGBa(0,120,240,0.5));
 }
 /*Un dégradé linéaire semi transparent devant une image de fond*/
 .degradedevant{
@@ -465,4 +465,67 @@ iframe {
 /*L'inverse ( image de fond devant le dégradé )*/
 .imagedevant{
     background: url('./smile.png') no-repeat top, linear-gradient(RGBa(0,120,240,0.2), RGB(0,120,240),RGBa(0,120,240,0.2));
+}
+/*Dégradé jaune-> rouge-> violet*/
+.degradejaunerougeviolet{
+  background:linear-gradient(RGB(240,240,0), RGB(240,0,0), RGB(120,0,240));
+}
+
+/*Dégradé bleu foncé-> bleu-> vert*/
+.degradebleufoncebleuvert{
+  background:linear-gradient(RGB(0,0,120), RGB(0,0,240), RGB(0,240,0));
+}
+
+/*Mélange des deux dégradés précédents*/
+.degrademelange{
+  background:linear-gradient(RGBa(240,240,0,0.5), RGBa(240,0,0,0.5), RGBa(120,0,240,0.5)),
+             linear-gradient(RGBa(0,0,120,0.5), RGBa(0,0,240,0.5), RGBa(0,240,0,0.5));
+}
+.yellowred10blue20{
+  background: linear-gradient(yellow, red 10%, blue 20%);
+}
+.repeatyellowred10blue20{
+  background: repeating-linear-gradient(yellow, red 10%, blue 20%);
+}
+.repeatyellowred10blue20yellow30{
+  background: repeating-linear-gradient(yellow, red 10%, blue 20%, yellow 30%);
+}
+.degraderadial{
+  width: 80%;
+  height: 120px;
+  border: 2px solid #333;
+  margin: 10px auto;
+}
+
+.radialyellowgreenblue{
+  background:radial-gradient(yellow, green, blue);
+}
+.radialcircleyellowgreenblue{
+  background:radial-gradient(circle, yellow, green, blue);
+}
+.radialyellow40green60blue{
+  background:radial-gradient(yellow 40%, green 60%, blue);
+}
+.radialattopyellowgreenblue{
+  background:radial-gradient(at top, yellow, green, blue);
+}
+.radialat2080yellowgreenblue{
+  background:radial-gradient(at 20% 80%, yellow, green, blue);
+}
+.radialclosestyellowgreenblue{
+  background:radial-gradient(closest-side, yellow, green, blue);
+}
+.radialclosestcircleyellowgreenblue{
+  background:radial-gradient(closest-side circle, yellow, green, blue);
+}
+.radial100circleattopyellowgreenblue{
+  background:radial-gradient(100px circle at top, yellow, green, blue);
+}
+.radial10050at2050yellow40green60blue{
+  background:radial-gradient(100px 50px at 25% 50%, yellow 40%, green 60%, blue);
+}
+
+/*Déclaration aberrante*/
+.radialaberrant{
+  background:radial-gradient(100px 50px circle at 25% 50%, yellow, green, blue);
 }
