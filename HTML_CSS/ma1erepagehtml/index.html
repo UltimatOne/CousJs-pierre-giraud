@@ -1205,5 +1205,40 @@
       <p>Déclaration aberrante<br>background:radial-gradient(100px 50px circle at 25% 50%, yellow, green, blue)</p>
       <div class="degraderadial radialaberrant"></div>
     </div>
+    <div class="div">
+      <h2>Ombres aux éléments avec la propriété CSS box-shadow</h2>
+      <h3>box-shadow, création d'ombres simples</h3>
+      <p>Ombre simple avec projection de 10px à droite, 10px vers le bas et couleur noir<br>box-shadow: 10px 10px black</p>
+      <div class="boitedombre ombre1">
+        <p>Une ombre projetée en bas à droite du div</p>
+      </div>
+      <p>Ombre simple avec projection de 10px à droite, 20px vers le haut (Le texte de la boite est bleu, l'ombre aussi par défaut)<br>box-shadow: 10px -20px
+      <br>color: blue</p>
+      <div class="boitedombre ombre2">
+        <p>Une ombre projetée en haut à droite du div</p>
+      </div>
+      <p>Ombre simple avec projection de 20px à gauche, 0px verticalement et de couleur noir<br>box-shadow: -20px 0px black</p>
+      <div class="boitedombre ombre3">
+        <p>Une ombre projetée uniquement à gauche du div</p>
+      </div>
+      <p>Ombre simple sans projection<br>box-shadow: 0px 0px</p>
+      <div class="boitedombre ombre4">
+        <p>Une ombre centrée uniquement sans projection</p>
+      </div>
+      <h3>La valeur inset pour créer une ombre interne</h3>
+      <p>Ombre simple interne avec projection de 10px à droite, 10px vers le bas et couleur noir<br>box-shadow: inset 10px 10px black</p>
+      <div class="boitedombre ombre1inset">
+        <p>Ombre interne projetée vers la droite et vers le bas</p>
+      </div>
+      <p>Ombre simple interne avec projection de 10px à gauche, 20px vers le haut et couleur vert-bleu<br>box-shadow: inset 10px -20px #0AA<br>color: blue</p>
+      <div class="boitedombre ombre2inset">
+        <p>Ombre interne vert-bleu</p>
+      </div>
+      <p>Ombre simple interne avec projection vers la droite de 20px couleur rose semi-transparent<br>box-shadow: inset 20px 0px RGBa(150,80,150,0.5)</p>
+      <div class="boitedombre ombre3inset">
+        <p>Ombre interne rosée semi transparente projetée vers la droite</p>
+      </div>
+      <h3>Flou et ombre centrée autour d'une boite</h3>
+    </div>
   </body>
 </html>

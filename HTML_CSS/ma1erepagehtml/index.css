@@ -529,3 +529,52 @@ iframe {
 .radialaberrant{
   background:radial-gradient(100px 50px circle at 25% 50%, yellow, green, blue);
 }
+
+.boitedombre{
+  border: 2px solid #777; /*Bordure de 2px*/
+  width: 80%; /*Largeur des divs = 80% de la page*/
+  margin: 0 auto; /*Centre nos div dans la page*/
+  background-color: #fbb854; /*Fond orangé*/
+  margin-bottom : 50px ;/*Marge externe basse de 50px*/
+  padding: 10px; /*Marges internes de 10px*/
+  box-sizing: border-box; /*Contenu + padding + border = 80%*/
+}
+
+/*Projection : 10px à droite, 10px vers le bas*/
+.ombre1{
+  box-shadow: 10px 10px black;
+}
+
+/*Projection : 10px à droite, 20px vers le haut*/
+/*Le texte de la boite est bleu, l'ombre aussi par défaut*/
+.ombre2{
+  box-shadow: 10px -20px;
+  color: blue;
+}
+
+/*Projection : 20px à gauche, 0px verticalement*/
+.ombre3{
+  box-shadow: -20px 0px black;
+}
+
+/*Projection : 0px (pas de projection)*/
+.ombre4{
+  box-shadow: 0px 0px;
+}
+
+/*Projection : 10px à droite, 10px vers le bas*/
+.ombre1inset{
+  box-shadow: inset 10px 10px black;
+}
+
+/*Projection interne: 10px à droite, 20px vers le haut*/
+/*Le texte de la boite est bleu*/
+.ombre2inset{
+  box-shadow: inset -10px -20px #0AA;
+  color: blue;
+}
+
+/*Projection interne: 20px à droite, 0px verticalement couleur rose semi-transparent*/
+.ombre3inset{
+  box-shadow: inset 20px 0px RGBa(150,80,150,0.5); /*Rose ?*/;
+}
