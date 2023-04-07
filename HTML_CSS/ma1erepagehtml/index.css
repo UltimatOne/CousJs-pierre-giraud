@@ -623,3 +623,31 @@ iframe {
 .ombre4flou {
   box-shadow: inset 0px 0px 20px red;
 }
+.ombre1taille {
+  box-shadow: 0px 0px 0px 10px yellow;
+}
+
+.ombre2taille {
+  box-shadow: 10px -20px 5px 10px yellow;
+  color: blue;
+}
+
+.ombre3taille {
+  box-shadow: -20px 0px 20px 10px yellow;
+}
+
+.ombre4taille {
+  box-shadow: 10px 15px 0px -10px yellow;
+}
+
+.ombre5taille {
+  box-shadow: inset 0px 0px 20px 10px red;
+}
+
+.ombre6taille {
+  box-shadow: inset -20px 0px 20px 10px red;
+}
+
+.ombre7taille {
+  box-shadow: inset 5px 15px 5px -10px red;
+}
