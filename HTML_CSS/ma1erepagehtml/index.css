@@ -570,6 +570,7 @@ iframe {
   margin-bottom: 50px; /*Marge externe basse de 50px*/
   padding: 10px; /*Marges internes de 10px*/
   box-sizing: border-box; /*Contenu + padding + border = 80%*/
+  border-radius: 5px;
 }
 
 /*Projection : 10px à droite, 10px vers le bas*/
@@ -650,4 +651,21 @@ iframe {
 
 .ombre7taille {
   box-shadow: inset 5px 15px 5px -10px red;
+}
+
+.ombre1simple {
+  box-shadow: 0px 0px 10px #000;
+}
+.ombre1multiple {
+  box-shadow: 0px 0px 10px #000, 0px 0px 30px rgb(0, 0, 255);
+}
+.ombre2multiple {
+  box-shadow: 0px 0px 10px #000, 0px 0px 20px RGB(255, 0, 0);
+}
+.ombre3multiple {
+  box-shadow: 0px 0px 20px #000, 0px 10px 10px -5px RGBa(255, 0, 0, 0.5);
+}
+.ombre4multiple {
+  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px RGB(120, 0, 255),
+    0px 0px 0px 15px RGB(220, 120, 0);
 }
