@@ -1,0 +1,50 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+form{
+    background-color: black;
+    width: 40%;
+    margin: 50px auto;
+}
+fieldset{
+    color: white;
+}
+.champ{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+legend{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    margin-left: -2%;
+}
+textarea{
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+}
+label{
+    display: inline-block;
+    margin-left: 10%;
+}
+input{
+    width: 80%;
+    margin: 0 auto;
+}
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+  }
+input[type="submit"]{
+    width: 30;
+    height: 35px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+select{
+    width: 80%;
+    margin: 0 auto;
+}

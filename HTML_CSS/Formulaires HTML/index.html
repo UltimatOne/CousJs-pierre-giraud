@@ -1,25 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Formulaires html</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- l'élément form permet de démarrer un Formulaire
+    l'attribut action (get ou post) permet de définir la méthode de transmission
+    get permet d'envoyer une petite quantité d'information de façon claire et visible dans les requetes HTTP, celui-ci n'est pas sécurisé
+    post permet d'envoyer une grande quantité de données de façon sécurisé vers un serveur php et sql par exemple
+    name permet d'envoyer les données en leur attribuant un nom pour être bien identifiées coté serveur de données -->
     <form method="post" action="form.php">
+      <fieldset>
+        <legend>Informations personnelles:</legend>
         <div class="champ">
-            <label for="pseudo">Entrez un pseudo:</label>
-            <input type="text">
+          <label for="nom">Nom de famille:</label>
+          <input type="text" id="nom" name="nom" minlength="2" maxlength="25" required/>
         </div>
         <div class="champ">
-            <label for="pass">Entrez un mot de passe:</label>
-            <input type="password">
+          <label for="prenom">Prénom:</label>
+          <input type="text" id="prenom" name="prenom" minlength="2" maxlength="25" required/>
         </div>
         <div class="champ">
-            <label for="mail">Entrez un mail:</label>
-            <input type="email">
+          <label for="mail">Adresse mail:</label>
+          <input type="mail" id="mail" name="mail" required/>
         </div>
+        <div class="champ">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="16" max="99"/>
+        </div>
+        <div class="champ">
+          <input type="radio" id="man" name="sexe" value="homme" />
+          <label for="man">Homme</label>
+          <input type="radio" id="woman" name="sexe" value="femme" />
+          <label for="woman">Femme</label>
+          <input type="radio" id="other" name="sexe" value="autre" />
+          <label for="other">Autre</label>
+        </div>
+        <div class="champ">
+          <label for="pays">Pays de résidence:</label>
+          <!-- select permet de créer une liste déroulante avec plusieurs options achoix unique
+          optgroup va permettre de créer un groupe d'option et lui donnant un nom avec l'attribut label
+          option permet d'afficher l'option dans la liste -->
+          <select id="pays" name="pays">
+            <optgroup label="Europe">
+              <option value="france">France</option>
+              <option value="belgique">Belgique</option>
+              <option value="suisse">Suisse</option>
+            </optgroup>
+            <optgroup label="Afrique">
+              <option value="algerie">Algérie</option>
+              <option value="tunisie">Tunisie</option>
+              <option value="maroc">Maroc</option>
+              <option value="madagascar">Madagascar</option>
+              <option value="benin">Bénin</option>
+              <option value="togo">Togo</option>
+            </optgroup>
+            <optgroup label="Amerique">
+              <option value="canada">Canada</option>
+            </optgroup>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Compétences / expérience:</legend>
+        <div class="champ">
+            <input type="checkbox" id="html" name="competences" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="competences" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="competences" value="javascript">
+            <label for="js">JavaScript</label>
+            <input type="checkbox" id="php" name="competences" value="php">
+            <label for="php">PHP</label>
+            <input type="checkbox" id="sql" name="competences" value="sql">
+            <label for="sql">SQL</label>
+            <input type="checkbox" id="typescript" name="competences" value="typescript">
+            <label for="typescript">Type Script</label>
+          </div>
+          <div class="champ">
+            <textarea name="exp" placeholder="Dites nous vos motivations en quelques lignes:" maxlength="1000"></textarea>
+           </div>
+      </fieldset>
+      <fieldset>
+        <legend>Validation:</legend>
+        <div class="champ">
+            <label for="pass">Choisissez un mot de passe:</label>
+            <input type="password" id="pass" name="pass" minlength="8" required/>
+          </div>
+          <div class="champ">
+            <input type="submit" value="Envoyez" />
+          </div>
+      </fieldset>
     </form>
-</body>
+  </body>
 </html>
