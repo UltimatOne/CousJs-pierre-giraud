@@ -15,11 +15,7 @@ nav {
 }
 nav ul {
   list-style-type: none;
-}
-nav li {
-  float: left;
-  width: 25%;
-  text-align: center;
+  display: flex;
 }
 nav ul::after {
   content: "";
@@ -49,11 +45,11 @@ nav a:hover {
     z-index: 1000;
 }
 nav > ul li:hover .sous{
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
 }
 .sous li{
-    float: none;
-    width: 100%;
+    flex: 1 1 auto;
     text-align: left;
 }
 .sous a{
@@ -69,8 +65,7 @@ nav > ul li:hover .sous{
     font-size: 12px;
 }
 nav ul li{
-    float: left;
-    width: 25%;
+    flex: 1 1 0;
     text-align: center;
     position: relative;
 }
