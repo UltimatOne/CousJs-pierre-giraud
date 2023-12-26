@@ -10,12 +10,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto"
     />
-
-    <!-- Start WOWSlider.com HEAD section -->
-    <!-- add to the <head> of your page -->
-    <link rel="stylesheet" type="text/css" href="engine0/style.css" />
-    <script type="text/javascript" src="engine0/jquery.js"></script>
-    <!-- End WOWSlider.com HEAD section -->
   </head>
   <body>
     <div class="lateralbar">
@@ -1467,8 +1461,8 @@
       </h3>
       <p>
         Il est également possible de sélectionner de façon plus précise les
-        éléments HTML possédant un attribut auquel il a été attribué une valeur
-        en particulier en CSS. Par exemple, il est possible de sélectionner tous
+        éléments HTML possédant un attribut auquel il a été attribué une valeur en
+        particulier en CSS. Par exemple, il est possible de sélectionner tous
         les éléments a possédant un attribut rel avec une valeur exactement
         égale à nofollow en utilisant la syntaxe a[rel="nofollow"].
       </p>
@@ -1552,84 +1546,5 @@
     <div class="div">
       <h2>Les transitions en CSS</h2>
     </div>
-    <!-- Start WOWSlider.com BODY section -->
-    <!-- add to the <body> of your page -->
-    <div id="wowslider-container0">
-      <div class="ws_images">
-        <ul>
-          <li>
-            <img
-              src="data0/images/facade1.png"
-              alt="Facade avant"
-              title="Facade avant"
-              id="wows0_0"
-            />
-          </li>
-          <li>
-            <img
-              src="data0/images/facade2.png"
-              alt="Facade après"
-              title="Facade après"
-              id="wows0_1"
-            />
-          </li>
-          <li>
-            <a href="/"
-              ><img
-                src="data0/images/facade3.jpg"
-                alt="bootstrap carousel"
-                title="Facade avant"
-                id="wows0_2"
-            /></a>
-          </li>
-          <li>
-            <img
-              src="data0/images/facade4.jpg"
-              alt="Facade après"
-              title="Facade après"
-              id="wows0_3"
-            />
-          </li>
-        </ul>
-      </div>
-      <div class="ws_bullets">
-        <div>
-          <a href="#" title="Facade avant"
-            ><span
-              ><img
-                src="data0/tooltips/facade1.png"
-                alt="Facade avant"
-              />1</span
-            ></a
-          >
-          <a href="#" title="Facade après"
-            ><span
-              ><img
-                src="data0/tooltips/facade2.png"
-                alt="Facade après"
-              />2</span
-            ></a
-          >
-          <a href="#" title="Facade avant"
-            ><span
-              ><img
-                src="data0/tooltips/facade3.jpg"
-                alt="Facade avant"
-              />3</span
-            ></a
-          >
-          <a href="#" title="Facade après"
-            ><span
-              ><img
-                src="data0/tooltips/facade4.jpg"
-                alt="Facade après"
-              />4</span
-            ></a
-          >
-        </div>
-      </div>
-    <script type="text/javascript" src="engine0/wowslider.js"></script>
-    <script type="text/javascript" src="engine0/script.js"></script>
-    <!-- End WOWSlider.com BODY section -->
   </body>
 </html>
