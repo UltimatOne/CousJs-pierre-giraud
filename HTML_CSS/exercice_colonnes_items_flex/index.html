@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Exercice grid flexbox</title>
+    </head>
+    <body>
+        <h1>Une page utilisant les grilles et le flexbox ?</h1>
+        <h1>facile !</h1>
+        <header>
+            <nav>
+                <div class="conteneur-nav">
+                  <label for="mobile">Afficher / Cacher le menu</label>
+                  <input type="checkbox" id="mobile" role="button">
+                    <ul>
+                        <li class="deroulant">
+                            <a href="#">Cours &ensp;</a>
+                            <ul class="sous">
+                                <li><a href="#">HTML et CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">PHP et MySQL</a></li>
+                            </ul>
+                        </li>
+                        <li class="deroulant">
+                            <a href="#">Articles &ensp;</a>
+                            <ul class="sous">
+                                <li><a href="#">CSS display</a></li>
+                                <li><a href="#">CSS position</a></li>
+                                <li><a href="#">CSS float</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">A propos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="conteneur">
+            <aside class="g1">Aside n° 1</aside>
+            <aside class="g2">Aside n° 2</aside>
+            <article class="g3 sousconteneur">
+                <header>
+                    <h1>Titre de l'article</h1>
+                    <p>Temps de lecture : 3mn</p>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Chapitre 1</a></li>
+                            <li><a href="#">Chapitre 2</a></li>
+                            <li><a href="#">Chapitre 3</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <article>
+                    <p>Le sujet de cet exercice est d'apprendre à créer une page avec un design complexe et flexible</p>
+                </article>
+                <footer>
+                    <p>A propos de l'auteur : Pierre Giraud...</p>
+                </footer>
+            </article>
+            <aside class="g4">
+                <p>Aside n°3</p>
+            </aside>
+            <aside class="g5">
+                <p>Aside n°4</p>
+            </aside>
+        </main>
+        <footer>
+            <p>HTML / CSS avec grid et flexbox </p>
+            <p>Pierre Giraud</p> 
+            <a href="https://www.pierre-giraud.com">www.pierre-giraud.com</a>
+        </footer>
+    </body>
+</html>

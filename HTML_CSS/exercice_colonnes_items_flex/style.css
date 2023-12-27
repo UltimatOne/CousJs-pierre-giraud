@@ -1,0 +1,181 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body > h1 {
+    text-align: center;
+}
+body > header {
+    position: sticky;
+    top: 0px;
+}
+body > header > nav {
+    width: 100%;
+    height: 42px;
+    margin: 0 auto;
+}
+.conteneur-nav {
+    position: absolute;
+    width: 100%;
+}
+body > header > nav input[type="checkbox"] {
+    display: none;
+}
+body > header > nav label {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+}
+body > header > nav ul {
+    display: none;
+    list-style-type: none;
+    background-color: rgb(230, 230, 230);
+}
+body > header > nav input[type="checkbox"]:checked + ul {
+    display: flex;
+    flex-flow: column wrap;
+}
+body > header > nav ul li {
+    flex: 1 1 auto;
+    text-align: center;
+}
+body > header > nav > div > ul > li > a {
+    color: black;
+}
+body > header > nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+.conteneur {
+    display: flex;
+    flex-flow: column wrap;
+}
+.g1, .g4 {
+    background-color: rgb(240, 240, 240);
+}
+.g2, .g5 {
+    background-color: rgb(250, 250, 250);
+}
+.g1, .g2, .g4, .g5 {
+    min-height: 100px;
+}
+.sousconteneur {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgb(200, 200, 200);
+    min-height: 30vh;
+}
+.sousconteneur h1 {
+    margin: 10px 0px 0px 0px;
+}
+.sousconteneur nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    justify-content: space-around;
+}
+.sousconteneur nav a {
+    display: block;
+    color: #333;
+}
+.sousconteneur header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sousconteneur article {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sousconteneur footer {
+    margin-bottom: 10px;
+}
+body > footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(230, 230, 230);
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media screen and (min-width: 980px) {
+    .conteneur-nav {
+        position: static;
+    }
+    body > header > nav label, nav input {
+        display: none;
+    }
+    body > header > nav input[type=checkbox]:checked + ul, body > header > nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: rgb(230, 230, 230);
+    }
+    body > header > nav ul li {
+        position: relative;
+    }
+    body > header > nav > div > ul > li > a {
+        color: black;
+    }
+    body > header > nav a {
+        border-bottom: 2px solid transparent;
+    }
+    body > header > nav a:hover {
+        color: white;
+        background-color: black;
+        border-bottom: 5px solid white;
+    }
+    .sous {
+        display: none;
+        box-shadow: 0px 1px 2px gray;
+        background-color: rgb(230, 230, 230);
+        position: absolute;
+        width: 100%;
+    }
+    body > header > nav > div > ul li:hover .sous {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .conteneur {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(2,minmax(300px, 1fr));
+    }
+    .sousconteneur {
+        min-height: 77.5vh;
+        display: grid;
+        grid-template-rows: 1fr 4fr 0.5fr;
+        justify-content: stretch;
+    }
+    .g1 {
+        grid-column: 1 / 2;
+    }
+    .g2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .g3 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+    .g4 {
+        grid-column: 3 / 4;
+    }
+    .g5 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+}
