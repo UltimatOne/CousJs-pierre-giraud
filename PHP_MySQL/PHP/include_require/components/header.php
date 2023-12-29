@@ -8,5 +8,5 @@
 </head>
 <body>
     <header>
-        <h1>je suis le header</h1>
+        <h1>je suis le header, je suis inclus avec include</h1>
     </header>
